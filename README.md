@@ -11,7 +11,8 @@
 
 <h2>Documentation</h2>
 
-Visit <a href="https://www.readwilliam.com/docs/ngx-tailwindui/installation">https://www.readwilliam.com/docs/ngx-tailwindui/installation</a> for full documentation.
+<p>The documentation is comming.</p>
+<!-- Visit <a href="https://www.readwilliam.com/docs/ngx-tailwindui/installation">https://www.readwilliam.com/docs/ngx-tailwindui/installation</a> for full documentation. -->
 
 <!-- <br />
 
@@ -194,7 +195,7 @@ Visit <a href="https://www.readwilliam.com/docs/ngx-tailwindui/installation">htt
 
 <h2>Getting Started</h2>
 
-<a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> is working with Tailwind CSS classes and you need to have Tailwind CSS installed on your project - <a href="https://tailwindcss.com/docs/installation/framework-guides?ref=material-tailwind" target="_blank">Tailwind CSS Installation.</a>
+<a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> works with Tailwind CSS utility-classes. You need to have Tailwind CSS installed on your project - <a href="https://tailwindcss.com/docs/installation/framework-guides?ref=material-tailwind" target="_blank">Tailwind CSS Installation.</a>
 
 <br />
 
