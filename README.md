@@ -1,6 +1,14 @@
-# Ngxtailwindui
+# NgxTailwindui (Angular x Tailwind UI)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
+Beautifull, fully customizable and ready to use Tailwind UI components for Angular developers
+
+## Contribution
+
+Pull requests are welcome!
+
+# Code of conduct
+
+There is no one for now.
 
 ## Development server
 
