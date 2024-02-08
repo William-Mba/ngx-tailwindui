@@ -326,4 +326,3 @@ The content of the commit message body should contain:
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
 [github]: https://github.com/William-Mba/ngx-tailwindui
 [js-style-guide]: https://google.github.io/styleguide/jsguide.html
-[stackoverflow]: https://stackoverflow.com/questions/tagged/angular
