@@ -1,35 +1,219 @@
-# NgxTailwindUI (Angular x Tailwind UI)
+<h1 align="center">
+    The Tailwind CSS Components Library for Angular
+</h1>
 
-Ready to use and customizable Tailwind UI components for Angular
+<p align="center">
+  <em><a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> is an open-source library that uses the power of Angular and Tailwind CSS <br>to help you create unique web applications
+    <br>faster and easier.</em>
+  <br>
+</p>
+<br>
 
-## Contribution
+<h2>Documentation</h2>
 
-Pull requests are welcome!
+Visit <a href="https://www.readwilliam.com/docs/ngx-tailwindui/installation">https://www.readwilliam.com/docs/ngx-tailwindui/installation</a> for full documentation.
 
-## Code of conduct
+<!-- <br />
 
-There is no one for now.
+### Components -->
+<!-- 
+<table>
+  <tr>
+    <td width="33.3333%">Accordion</td>
+    <td width="33.3333%">Alert</td>
+    <td width="33.3333%">Avatar</td>
+  </tr>
+  <tr>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/accordion">
+        <img alt="accordion" src="./public/image/components/accordion-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/alert">
+        <img alt="alert" src="./public/image/components/alert-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/avatar">
+        <img alt="avatar" src="./public/image/components/avatar-thumbnail.jpg">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Breadcrumbs</td>
+    <td width="33.3333%">Button</td>
+    <td width="33.3333%">Card</td>
+  </tr>
+  <tr>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/breadcrumbs">
+        <img alt="breadcrumbs" src="./public/image/components/breadcrumbs-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/button">
+        <img alt="button" src="./public/image/components/button-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/card">
+        <img alt="card" src="./public/image/components/card-thumbnail.jpg">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Checkbox</td>
+    <td width="33.3333%">Chip</td>
+    <td width="33.3333%">Dialog</td>
+  </tr>
+  <tr>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/checkbox">
+        <img alt="checkbox" src="./public/image/components/checkbox-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/chip">
+        <img alt="chip" src="./public/image/components/chip-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/dialog">
+        <img alt="dialog" src="./public/image/components/dialog-thumbnail.jpg">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Icon Button</td>
+    <td width="33.3333%">Input</td>
+    <td width="33.3333%">Menu</td>
+  </tr>
+  <tr>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/icon-button">
+        <img alt="icon-button" src="./public/image/components/icon-button-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/input">
+        <img alt="input" src="./public/image/components/input-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/menu">
+        <img alt="menu" src="./public/image/components/menu-thumbnail.jpg">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Navbar</td>
+    <td width="33.3333%">Pagination</td>
+    <td width="33.3333%">Popover</td>
+  </tr>
+  <tr>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/navbar">
+        <img alt="navbar" src="./public/image/components/navbar-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/pagination">
+        <img alt="pagination" src="./public/image/components/pagination-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/popover">
+        <img alt="popover" src="./public/image/components/popover-thumbnail.jpg">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Progress Bar</td>
+    <td width="33.3333%">Radio Button</td>
+    <td width="33.3333%">Select</td>
+  </tr>
+  <tr>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/radio-button">
+        <img alt="radio-button" src="./public/image/components/radio-button-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/select">
+        <img alt="select" src="./public/image/components/select-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/progress-bar">
+        <img alt="progress-bar" src="./public/image/components/progress-bar-thumbnail.jpg">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.3333%">Switch</td>
+    <td width="33.3333%">Tabs</td>
+    <td width="33.3333%">Textarea</td>
+  </tr>
+  <tr>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/tabs">
+        <img alt="tabs" src="./public/image/components/tabs-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/textarea">
+        <img alt="textarea" src="./public/image/components/text-area-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/switch">
+        <img alt="switch" src="./public/image/components/switch-thumbnail.jpg">
+      </a>
+    </td>
+  </tr>
+  <tr>
+  <td width="33.3333%">Tooltip</td>
+    <td width="33.3333%">Typography</td>
+  </tr>
+  <tr>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/typography">
+        <img alt="typography" src="./public/image/components/typography-thumbnail.jpg">
+      </a>
+    </td>
+    <td width="33.3333%" style="padding: 0;">
+      <a href="https://www.material-tailwind.com/docs/html/tooltip">
+        <img alt="tooltip" src="./public/image/components/tooltip-thumbnail.jpg">
+      </a>
+    </td>
+  </tr>
+</table>
+ -->
+<br>
 
-## Development server
+<h2>Getting Started</h2>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> is working with Tailwind CSS classes and you need to have Tailwind CSS installed on your project - <a href="https://tailwindcss.com/docs/installation/framework-guides?ref=material-tailwind" target="_blank">Tailwind CSS Installation.</a>
 
-## Code scaffolding
+<br />
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Install `@ngx-tailwindui`.
 
-## Build
+```bash
+npm i @ngx-tailwindui
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<br />
 
-## Running unit tests
+## Contributing
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Contributions are always welcome!
 
-## Running end-to-end tests
+See `CONTRIBUTING.md` for ways to get started.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Please adhere to this project's `CODE_OF_CONDUCT.md`.
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[MIT](https://github.com/William-Mba/ngx-tailwindui/blob/master/LICENSE)
