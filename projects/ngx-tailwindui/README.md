@@ -1,6 +1,6 @@
-# NgxTailwindui
+# NgxTailwindUI (Angular x Tailwind UI)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Ready to use and customizable Tailwind UI components for Angular
 
 ## Code scaffolding
 

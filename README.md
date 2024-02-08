@@ -1,6 +1,6 @@
-# NgxTailwindui (Angular x Tailwind UI)
+# NgxTailwindUI (Angular x Tailwind UI)
 
-Beautifull, fully customizable and ready to use Tailwind UI components for Angular developers
+Ready to use and customizable Tailwind UI components for Angular
 
 ## Contribution
 

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngxtailwindui": {
+    "ngx-tailwindui-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -40,7 +40,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngxtailwindui",
+            "outputPath": "dist/ngx-tailwindui-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -87,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngxtailwindui:build:production"
+              "browserTarget": "ngx-tailwindui-web:build:production"
             },
             "development": {
-              "browserTarget": "ngxtailwindui:build:development"
+              "browserTarget": "ngx-tailwindui-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,40 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngxtailwindui:build"
-          }
-        }
-      }
-    },
-    "ngx-tailwind-ui": {
-      "projectType": "library",
-      "root": "projects/ngx-tailwind-ui",
-      "sourceRoot": "projects/ngx-tailwind-ui/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/ngx-tailwind-ui/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ngx-tailwind-ui/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/ngx-tailwind-ui/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "projects/ngx-tailwind-ui/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "browserTarget": "ngx-tailwindui-web:build"
           }
         }
       }

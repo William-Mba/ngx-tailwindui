@@ -12,9 +12,6 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-tailwind-ui": [
-        "dist/ngx-tailwind-ui"
-      ],
       "ngx-tailwindui": [
         "dist/ngx-tailwindui"
       ]
