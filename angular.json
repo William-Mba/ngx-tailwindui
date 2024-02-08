@@ -107,7 +107,7 @@
       "projectType": "library",
       "root": "projects/ngx-tailwindui",
       "sourceRoot": "projects/ngx-tailwindui/src",
-      "prefix": "lib",
+      "prefix": "nxt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

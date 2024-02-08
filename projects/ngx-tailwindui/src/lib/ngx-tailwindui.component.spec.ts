@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxTailwinduiComponent } from './ngx-tailwindui.component';
+import { NgxTailwindUIComponent } from './ngx-tailwindui.component';
 
-describe('NgxTailwinduiComponent', () => {
-  let component: NgxTailwinduiComponent;
-  let fixture: ComponentFixture<NgxTailwinduiComponent>;
+describe('NgxTailwindUIComponent', () => {
+  let component: NgxTailwindUIComponent;
+  let fixture: ComponentFixture<NgxTailwindUIComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NgxTailwinduiComponent]
+      declarations: [NgxTailwindUIComponent]
     });
-    fixture = TestBed.createComponent(NgxTailwinduiComponent);
+    fixture = TestBed.createComponent(NgxTailwindUIComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

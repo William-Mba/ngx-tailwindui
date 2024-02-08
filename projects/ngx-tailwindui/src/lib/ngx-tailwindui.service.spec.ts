@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgxTailwinduiService } from './ngx-tailwindui.service';
+import { NgxTailwindUIService } from './ngx-tailwindui.service';
 
-describe('NgxTailwinduiService', () => {
-  let service: NgxTailwinduiService;
+describe('NgxTailwindUIService', () => {
+  let service: NgxTailwindUIService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(NgxTailwinduiService);
+    service = TestBed.inject(NgxTailwindUIService);
   });
 
   it('should be created', () => {

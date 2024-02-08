@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class NgxTailwinduiService {
+export class NgxTailwindUIService {
 
   constructor() { }
 }

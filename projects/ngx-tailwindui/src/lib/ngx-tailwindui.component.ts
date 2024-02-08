@@ -10,6 +10,6 @@ import { Component } from '@angular/core';
   styles: [
   ]
 })
-export class NgxTailwinduiComponent {
+export class NgxTailwindUIComponent {
 
 }
