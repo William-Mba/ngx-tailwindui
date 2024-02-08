@@ -6,7 +6,7 @@ Ready to use and customizable Tailwind UI components for Angular
 
 Pull requests are welcome!
 
-# Code of conduct
+## Code of conduct
 
 There is no one for now.
 
