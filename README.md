@@ -10,7 +10,7 @@
 
 <h1></h1>
 
-<p>The story behing..</p>
+<p>The story behind..</p>
 <br>
 <p>
 I have used Angular and Bootstrap for a long time to create web applications, but since I started using Tailwindcss in my projects, I can no longer go back to Bootstrap.
