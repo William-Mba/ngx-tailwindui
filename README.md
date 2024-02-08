@@ -1,5 +1,5 @@
 <h1 align="center">
-    The Tailwind CSS Components Library for Angular
+    Tailwind UI Components Library For Angular
 </h1>
 
 <p align="center">
@@ -7,11 +7,26 @@
     <br>faster and easier.</em>
   <br>
 </p>
+
+<h1></h1>
+
+<p>The story behing..</p>
+<br>
+<p>
+I have used Angular and Bootstrap for a long time to create web applications, but since I started using Tailwindcss in my projects, I can no longer go back to Bootstrap.
+<br>
+<br>
+  Before <a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a>, Tailwind UI components was only available in HTML, React and Vue.
+  <br>
+  <br>
+After searching for an Angular version without finding a solution, I decided to create <a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> and then share it with the ommunity so that it can be useful to Angular developers who, like me, want to use Tailwind UI components in their projects without reinventing the wheel.
+</p>
+
 <br>
 
 <h2>Documentation</h2>
 
-<p>The documentation is comming.</p>
+<p>Comming soon...</p>
 <!-- Visit <a href="https://www.readwilliam.com/docs/ngx-tailwindui/installation">https://www.readwilliam.com/docs/ngx-tailwindui/installation</a> for full documentation. -->
 
 <!-- <br />
