@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
-import { NgxTailwindUIComponent } from './ngx-tailwindui.component';
+import { CoreModule } from "./core/core.module";
+import { ComponentsModule } from './components/components.module';
 
-
+const modules = [
+  CoreModule,
+  ComponentsModule
+]
 
 @NgModule({
-  declarations: [
-    NgxTailwindUIComponent
-  ],
+  declarations: [],
   imports: [
+    ...modules
   ],
   exports: [
-    NgxTailwindUIComponent
+    ...modules
   ]
 })
 export class NgxTailwindUiModule { }

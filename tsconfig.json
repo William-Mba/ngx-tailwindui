@@ -13,7 +13,7 @@
     "sourceMap": true,
     "paths": {
       "ngx-tailwindui": [
-        "dist/ngx-tailwindui"
+        "projects/ngx-tailwindui/src/public-api.ts"
       ]
     },
     "declaration": false,

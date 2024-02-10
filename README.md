@@ -8,19 +8,6 @@
   <br>
 </p>
 
-<h1></h1>
-
-<p>The story behind..</p>
-<br>
-<p>
-I have used Angular and Bootstrap for a long time to create web applications, but since I started using Tailwindcss in my projects, I can no longer go back to Bootstrap.
-<br>
-<br>
-  Before <a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a>, Tailwind UI components was only available in HTML, React and Vue.
-  <br>
-  <br>
-After searching for an Angular version without finding a solution, I decided to create <a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> and then share it with the ommunity so that it can be useful to Angular developers who, like me, want to use Tailwind UI components in their projects without reinventing the wheel.
-</p>
 
 <br>
 
