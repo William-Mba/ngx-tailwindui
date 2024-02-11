@@ -1,0 +1,118 @@
+<ng-container [ngSwitch]="variant">
+    <ng-template *ngSwitchCase="btnV.elevated" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'rounded-none': rounded === roundedV.none,
+            'rounded-sm': rounded === roundedV.sm,
+            'rounded-md': rounded === roundedV.md,
+            'rounded-lg': rounded === roundedV.lg,
+            'rounded-full': rounded === roundedV.full,
+            'shadow-sm shadow-neutral-400': true,
+            'px-2.5 py-1.5 text-xs text-nowrap font-medium bg-indigo-600 text-neutral-100 bg-opacity hover:bg-opacity-100': btnV.elevated,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+    <ng-template *ngSwitchCase="btnV.filled" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'rounded-none': rounded === roundedV.none,
+            'rounded-sm': rounded === roundedV.sm,
+            'rounded-md': rounded === roundedV.md,
+            'rounded-lg': rounded === roundedV.lg,
+            'rounded-full': rounded === roundedV.full,
+            'shadow-md': true,
+            'px-2 py-1.5 text-sm font-medium bg-neutral-600 hover:bg-indigo-700 text-white': btnV.filled,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+    <ng-template *ngSwitchCase="btnV.filledTonal" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'rounded-none': rounded === roundedV.none,
+            'rounded-sm': rounded === roundedV.sm,
+            'rounded-md': rounded === roundedV.md,
+            'rounded-lg': rounded === roundedV.lg,
+            'rounded-full': rounded === roundedV.full,
+            'shadow-md': true,
+            'px-2 py-1.5 text-sm font-medium bg-neutral-600 hover:bg-indigo-700 text-white': btnV.filledTonal,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+    <ng-template *ngSwitchCase="btnV.outlined" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'rounded-none': rounded === roundedV.none,
+            'rounded-sm': rounded === roundedV.sm,
+            'rounded-md': rounded === roundedV.md,
+            'rounded-lg': rounded === roundedV.lg,
+            'rounded-full': rounded === roundedV.full,
+            'shadow-md': true,
+            'px-2 py-1.5 text-sm font-medium bg-neutral-600 hover:bg-indigo-700 text-white': btnV.outlined,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+    <ng-template *ngSwitchCase="btnV.text" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'px-2 py-1.5 text-sm font-medium bg-transparent dark:text-neutral-300 text-neutral-900': btnV.text,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+    <ng-template *ngSwitchCase="btnV.icon" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'rounded-none': rounded === roundedV.none,
+            'rounded-sm': rounded === roundedV.sm,
+            'rounded-md': rounded === roundedV.md,
+            'rounded-lg': rounded === roundedV.lg,
+            'rounded-full': rounded === roundedV.full,
+            'px-2 py-1.5 text-sm font-medium bg-neutral-600 hover:bg-indigo-700 text-white': btnV.icon,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+    <ng-template *ngSwitchCase="btnV.segmented" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'rounded-none': rounded === roundedV.none,
+            'rounded-sm': rounded === roundedV.sm,
+            'rounded-md': rounded === roundedV.md,
+            'rounded-lg': rounded === roundedV.lg,
+            'rounded-full': rounded === roundedV.full,
+            'px-2 py-1.5 text-sm font-medium bg-neutral-600 hover:bg-indigo-700 text-white': true,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+    <ng-template *ngSwitchCase="btnV.fab" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'rounded-none': rounded === roundedV.none,
+            'rounded-sm': rounded === roundedV.sm,
+            'rounded-md': rounded === roundedV.md,
+            'rounded-lg': rounded === roundedV.lg,
+            'rounded-full': rounded === roundedV.full,
+            'px-2 py-1.5 text-sm font-medium bg-neutral-600 hover:bg-indigo-700 text-white': true,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+    <ng-template *ngSwitchCase="btnV.extendedFab" #default [ngTemplateOutlet]="customTemplate || default">
+        <button href="#" [ngClass]="customStyle || {
+            'rounded-none': rounded === roundedV.none,
+            'rounded-sm': rounded === roundedV.sm,
+            'rounded-md': rounded === roundedV.md,
+            'rounded-lg': rounded === roundedV.lg,
+            'rounded-full': rounded === roundedV.full,
+            'px-2 py-1.5 text-sm font-medium bg-neutral-600 hover:bg-indigo-700 text-white': true,
+            }">
+            <ng-container [ngTemplateOutlet]="contentChild.template"
+                [ngTemplateOutletInjector]="injector"></ng-container>
+        </button>
+    </ng-template>
+</ng-container>

@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
-import { ButtonComponent } from './elements/button/button.component';
+import { ButtonComponent } from '../elements/button/button.component';
+import { FabDirective } from './shared/fab.directive';
+import { ExtendedFabDirective } from './shared/extended-fab.directive';
 
 const components = [
-  ButtonComponent
+  ButtonComponent,
+]
+
+const directives = [
+  FabDirective,
+  ExtendedFabDirective
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ...directives
+  ],
   imports: [
     ...components
   ],
   exports: [
-    ...components
+    ...components,
+    ...directives
   ]
 })
 export class CoreModule { }
