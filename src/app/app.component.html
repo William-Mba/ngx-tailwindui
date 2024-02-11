@@ -1,67 +1,110 @@
 <div
   class="grid h-full justify-center py-16 gap-6 border-8 text-neutral-900 dark:text-neutral-300 bg-emerald-50 dark:bg-neutral-900">
   <h1 class="text-4xl font-extrabold">Buttons</h1>
-  <div class="container grid gap-4 bg-red-100 bg-opacity-15 p-14 rounded-3xl border-neutral-300 border">
-
+  <div
+    class="container flex flex-wrap gap-24 bg-emerald-600 dark:bg-emerald-100 bg-opacity-10 p-20 rounded-3xl border-neutral-300 border">
     <nxt-button variant="elevated" rounded="full">
-      <div *nxtContent class="flex gap-0.5">
+      <div *nxtContent class="flex gap-1 relative">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
           <path
             d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
         </svg>
         Elevated
+        <span
+          class="rounded-full absolute top-10 left-1/4 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">1</span>
       </div>
     </nxt-button>
-    <button class="rounded-full text-neutral-200 bg-neutral-700 inline justify-center w-7 p-0.5">1</button>
-    <nxt-button variant="filled" [rounded]="'none'">
-      <p *nxtContent>
-        Fill
-      </p>
+    <nxt-button variant="filled" rounded="full">
+      <div *nxtContent class="flex gap-0.5 relative">
+        Filled
+        <span
+          class="rounded-full absolute top-10 left-0.5 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">2</span>
+      </div>
     </nxt-button>
-    <nxt-button variant="filled-tonal" [rounded]="'none'">
-      <p *nxtContent>
+    <nxt-button variant="filled-tonal" rounded="full">
+      <div *nxtContent class="flex gap-0.5 relative">
         Filled Tonal
-      </p>
+        <span
+          class="rounded-full absolute top-10 left-1/4 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">3</span>
+      </div>
     </nxt-button>
     <nxt-button variant="outlined" rounded="full">
-      <p *nxtContent>
+      <div *nxtContent class="flex gap-0.5 relative">
         Outlined
-      </p>
-    </nxt-button>
-    <nxt-button variant="text" rounded="full">
-      <p *nxtContent>
-        Text
-      </p>
-    </nxt-button>
-    <nxt-button variant="icon" [rounded]="'none'">
-      <svg *nxtContent xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-        stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46" />
-      </svg>
-    </nxt-button>
-    <nxt-button variant="segmented">
-      <div *nxtContent class="flex text-nowrap divide-x-2">
-        <p class="hover:bg-gray-700 p-3 size-full inline-block">
-          Segmented 1
-        </p>
-        <p class="p-3 h-full w-full hover:bg-indigo-400">
-          Segmented 2
-        </p>
-        <p class="p-3">
-          Segmented 3
-        </p>
+        <span
+          class="rounded-full absolute top-10 left-1/4 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">4</span>
       </div>
     </nxt-button>
-    <nxt-button variant="fab" rounded="full">
-      <p *nxtContent>
-        Extended FAB Button
-      </p>
+    <nxt-button variant="text" rounded="full">
+      <div *nxtContent class="flex gap-0.5 relative">
+        Text
+        <span
+          class="rounded-full absolute top-10 left-0.5 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">5</span>
+      </div>
     </nxt-button>
-    <nxt-button variant="extended-fab" rounded="full">
-      <p *nxtContent>
-        Extended FAB Button
-      </p>
+    <nxt-button variant="icon" [rounded]="'none'">
+      <div *nxtContent class="flex gap-0.5 relative">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46" />
+        </svg>
+        <span
+          class="rounded-full absolute top-10 left-0.5 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">6</span>
+      </div>
+    </nxt-button>
+    <div class="flex rounded-l-full m-6 rounded-r-full relative">
+      <nxt-button rounded="none" variant="filled-tonal">
+        <div *nxtContent class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd"
+              d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
+              clip-rule="evenodd" />
+          </svg>
+          <p>
+            Selected
+          </p>
+        </div>
+      </nxt-button>
+      <nxt-button rounded="none" variant="filled-tonal">
+        <div *nxtContent class="flex">
+          <p>
+            Enabled
+          </p>
+        </div>
+      </nxt-button>
+      <nxt-button rounded="none" variant="filled-tonal">
+        <div *nxtContent class="flex">
+          <p>
+            Enabled
+          </p>
+        </div>
+        <span
+        class="rounded-full absolute top-12 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">9</span>
+      </nxt-button>
+    </div>
+    <nxt-button variant="fab" rounded="lg">
+      <div *nxtContent class="flex gap-0.5 relative">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path
+            d="M2 3.5A1.5 1.5 0 0 1 3.5 2h2A1.5 1.5 0 0 1 7 3.5v2A1.5 1.5 0 0 1 5.5 7h-2A1.5 1.5 0 0 1 2 5.5v-2ZM2 10.5A1.5 1.5 0 0 1 3.5 9h2A1.5 1.5 0 0 1 7 10.5v2A1.5 1.5 0 0 1 5.5 14h-2A1.5 1.5 0 0 1 2 12.5v-2ZM10.5 2A1.5 1.5 0 0 0 9 3.5v2A1.5 1.5 0 0 0 10.5 7h2A1.5 1.5 0 0 0 14 5.5v-2A1.5 1.5 0 0 0 12.5 2h-2ZM11.5 9a.75.75 0 0 1 .75.75v1h1a.75.75 0 0 1 0 1.5h-1v1a.75.75 0 0 1-1.5 0v-1h-1a.75.75 0 0 1 0-1.5h1v-1A.75.75 0 0 1 11.5 9Z" />
+        </svg>
+        <span
+          class="rounded-full absolute top-12 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">8</span>
+      </div>
+    </nxt-button>
+    <nxt-button variant="extended-fab" rounded="lg">
+      <div *nxtContent class="flex gap-2 relative">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+          <path
+            d="m5.433 13.917 1.262-3.155A4 4 0 0 1 7.58 9.42l6.92-6.918a2.121 2.121 0 0 1 3 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 0 1-.65-.65Z" />
+          <path
+            d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0 0 10 3H4.75A2.75 2.75 0 0 0 2 5.75v9.5A2.75 2.75 0 0 0 4.75 18h9.5A2.75 2.75 0 0 0 17 15.25V10a.75.75 0 0 0-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5Z" />
+        </svg>
+        Extended FAB
+        <span
+          class="rounded-full absolute top-12 text-neutral-100 bg-neutral-800 text-xs inline-flex justify-center w-5 p-0.5 mb-6">9</span>
+      </div>
     </nxt-button>
 
   </div>
