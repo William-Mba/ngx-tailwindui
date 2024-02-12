@@ -1,5 +1,5 @@
 <h1 align="center">
-    Tailwind CSS Components Library For Angular projects
+    Tailwind CSS Components Library For Angular
 </h1>
 
 <p align="center">
