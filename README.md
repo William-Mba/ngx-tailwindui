@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <em><a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> is an open-source library that uses the power of <a href="https://angular.dev/">Angular</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a> <br>to help you create unique and visually appealing modern web applications faster and easier <br> with a set of ready-to-use and well-crafted components inspired by <a href="https://tailwindui.com/">Tailwind UI</a></em>.
+  <em><a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> is an open-source library that uses the power of <a href="https://angular.dev/">Angular</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a> <br>to help you create unique and visually appealing modern web applications faster and easier <br> with a set of ready-to-use and well-crafted components inspired by <a href="https://tailwindui.com/">Tailwind UI</a> and <a href="https://m3.material.io/">Material Design</a></em>.
   <br>
 </p>
 
