@@ -1,24 +1,48 @@
-# NgxTailwindUI (Angular x Tailwind UI)
+<h1 align="center">
+    Tailwind UI Components Library For Angular
+</h1>
 
-Ready to use and customizable Tailwind UI components for Angular
+<p align="center">
+  <em><a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> is an open-source library that uses the power of Angular and Tailwind CSS <br>to help you create unique web applications
+    <br>faster and easier.</em>
+  <br>
+</p>
 
-## Code scaffolding
 
-Run `ng generate component component-name --project ngx-tailwindui` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-tailwindui`.
-> Note: Don't forget to add `--project ngx-tailwindui` or else it will be added to the default project in your `angular.json` file. 
+<br>
 
-## Build
+<h2>Documentation</h2>
 
-Run `ng build ngx-tailwindui` to build the project. The build artifacts will be stored in the `dist/` directory.
+<p>Comming soon...</p>
 
-## Publishing
+<br />
 
-After building your library with `ng build ngx-tailwindui`, go to the dist folder `cd dist/ngx-tailwindui` and run `npm publish`.
+## Components
+<p>Comming soon...</p>
+<br>
 
-## Running unit tests
+<h2>Getting Started</h2>
 
-Run `ng test ngx-tailwindui` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<a href="https://www.npmjs.com/package/ngx-tailwindui">@ngx-tailwindui</a> works with Tailwind CSS utility-classes. You need to have Tailwind CSS installed on your project - <a href="https://tailwindcss.com/docs/installation/framework-guides?ref=material-tailwind" target="_blank">Tailwind CSS Installation.</a>
 
-## Further help
+<br />
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Install `@ngx-tailwindui`.
+
+```bash
+npm i @ngx-tailwindui
+```
+
+<br />
+
+## Contributing
+
+Contributions are always welcome!
+
+See `CONTRIBUTING.md` for ways to get started.
+
+Please adhere to this project's `CODE_OF_CONDUCT.md`.
+
+## License
+
+[MIT](https://github.com/William-Mba/ngx-tailwindui/blob/master/LICENSE)
