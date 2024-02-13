@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { Color } from \"../../shared/colors.shared\";\nexport class BorderWidth {\n  static #_ = this.border = 'border';\n  static #_2 = this.transparent = `border-${Color.transparent}`;\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

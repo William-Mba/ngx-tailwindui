@@ -17,8 +17,6 @@ export * from './lib/elements/button/button.component'
 ////  core/shared: please place each import based on the file position in it folder. 
 export * from './lib/core/shared/array-helper.shared'
 export * from './lib/core/shared/colors.shared'
-export * from './lib/core/shared/extended-fab.directive'
-export * from './lib/core/shared/fab.directive'
 
 //// core/styles: please place each import based on the file position in it folder. 
 

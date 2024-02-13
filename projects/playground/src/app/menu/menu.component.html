@@ -1,0 +1,51 @@
+<nav id=navbar
+    class="fixed start-0 top-0 z-20 flex w-full justify-center border-b border-gray-200 backdrop-blur-md md:h-38 dark:border-gray-700 bg-emerald-50/85 dark:bg-neutral-900/85">
+    <div class="mx-auto flex w-[1280px] flex-wrap items-center justify-between place-self-center object-center p-4">
+        <a href="/" class="flex items-center justify-start space-x-3 rtl:space-x-reverse">
+            <p class=w-[120px]>
+                <img id=logo-light-icon src="assets/images/logos/logo.svg" class="h-[56px]" alt=Logo>
+                <img id=logo-dark-icon src="assets/images/logos/logo-dark.svg" class="h-[56px]" alt=Logo>
+            </p>
+        </a>
+        <div class="flex items-center space-x-3 md:order-2 rtl:space-x-reverse">
+            <button (click)="toggleDarkTheme()" id=theme-toggle type=button
+                class="bg-emerald-900 bg-opacity-0 hover:bg-opacity-10 rounded-full md:p-5">
+                <svg id="theme-toggle-dark-icon" class="h-5 w-5" fill="#fff" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001.0 1010.586 10.586z" />
+                </svg>
+                <svg id="theme-toggle-light-icon" class="h-5 w-5" fill="currentcolor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 2a1 1 0 011 1v1A1 1 0 119 4V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707A1 1 0 1113.536 5.05l.707-.707a1 1 0 011.414.0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707A1 1 0 004.343 5.757l.707.707zm1.414 8.486-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd" />
+                </svg>
+            </button>
+            <button type=button id=search-icon
+                class="bg-emerald-900 bg-opacity-0 hover:bg-opacity-10 rounded-full md:p-5">
+                <svg id="search-dark-icon" t="1702210633165" class="icon" viewBox="0 0 1024 1024"
+                    xmlns="http://www.w3.org/2000/svg" p-id="4364" width="16" height="16">
+                    <path
+                        d="M426.666667 768a339.285333 339.285333.0 00208.938666-72.021333L823.168 883.541333l60.330667-60.330666L695.936 635.648A339.285333 339.285333.0 00768 426.666667C768 238.464 614.869333 85.333334 426.666667 85.333333S85.333334 238.464 85.333333 426.666667 238.464 768 426.666667 768zm0-597.333333c141.184.0 256 114.816 256 256s-114.816 256-256 256-256-114.816-256-256 114.816-256 256-256z"
+                        fill="#fff" p-id="4365" />
+                </svg>
+                <svg id="search-light-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                    class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                        d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+            <button data-collapse-toggle=navbar-sticky type=button
+                class="inline-flex h-10 w-10 items-center justify-center p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-700"
+                aria-controls=navbar-sticky aria-expanded=false>
+                <span class=sr-only>Open main menu</span>
+                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
