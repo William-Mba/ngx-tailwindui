@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class ArrayO {\n  /**Merge two arrays into one without duplicates\n   * @returns new Set<T>()\n   */\n  static merge(array1, array2) {\n    return [...new Set([...array1, ...array2])];\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
