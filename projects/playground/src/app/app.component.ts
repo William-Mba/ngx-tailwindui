@@ -7,10 +7,12 @@ import { ThemeService } from './theme.service';
   styles: []
 })
 export class AppComponent {
+  alert() {
+    alert("Clicked");
+  }
   private themeService = inject(ThemeService)
 
-  ngOnInit (): void
-  {
+  ngOnInit(): void {
     this.themeService.initializeSettings();
   }
   protected toggleDarkTheme() {

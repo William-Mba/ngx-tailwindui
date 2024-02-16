@@ -1,0 +1,1 @@
+export type BoxSizing = "box-border" | "box-content"

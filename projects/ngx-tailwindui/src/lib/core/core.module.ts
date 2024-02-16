@@ -8,7 +8,8 @@ const components = [
 const directives = []
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     ...components
   ],
