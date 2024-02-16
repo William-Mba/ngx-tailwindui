@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NgxTailwindUiModule} from 'ngx-tailwindui';
+import { ButtonComponent, NgxTailwindUiModule } from 'ngx-tailwindui';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { IconDirective } from 'projects/ngx-tailwindui/src/lib/core/directives/icon/icon.directive';
 
 const routes: Routes = []
 @NgModule({
@@ -14,6 +15,8 @@ const routes: Routes = []
   ],
   imports: [
     BrowserModule,
+    IconDirective,
+    ButtonComponent,
     NgxTailwindUiModule,
     RouterModule.forRoot(routes)
   ],
