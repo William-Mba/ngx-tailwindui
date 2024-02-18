@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SegmentedButtonComponent } from './segmented-button/segmented-button.component';
 
-
+const components = [
+  SegmentedButtonComponent
+]
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
+    ...components
+  ],
+  exports: [
+    ...components
   ]
 })
 export class ComponentsModule { }

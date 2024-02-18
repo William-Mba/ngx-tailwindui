@@ -1,27 +1,24 @@
 <ng-container [ngSwitch]="variant">
-    <ng-template *ngSwitchCase="'filled'" #filled [ngTemplateOutlet]="filled">
-        <button href="#" [ngClass]="style">            
-            <ng-container *ngIf="iconRef" [ngTemplateOutlet]="icon"></ng-container>
+    <ng-template *ngSwitchCase="'filled'" #filled [ngTemplateOutlet]="customButtonRef || filled">
+        <button [ngClass]="style">
             <ng-container [ngTemplateOutlet]="content"></ng-container>
         </button>
     </ng-template>
-    <ng-template *ngSwitchCase="'outlined'" #outlined [ngTemplateOutlet]="outlined">
-        <button href="#" [ngClass]="style">
-            <ng-container *ngIf="iconRef" [ngTemplateOutlet]="icon"></ng-container>
+    <ng-template *ngSwitchCase="'outlined'" #outlined [ngTemplateOutlet]="customButtonRef || outlined">
+        <button [ngClass]="style">
             <ng-container [ngTemplateOutlet]="content"></ng-container>
         </button>
     </ng-template>
-    <ng-template *ngSwitchCase="'text'" #text [ngTemplateOutlet]="text">
-        <button href="#" [ngClass]="style">
-            <ng-container *ngIf="iconRef" [ngTemplateOutlet]="icon"></ng-container>
+    <ng-template *ngSwitchCase="'text'" #text [ngTemplateOutlet]="customButtonRef || text">
+        <button [ngClass]="style">
             <ng-container [ngTemplateOutlet]="content"></ng-container>
         </button>
     </ng-template>
 </ng-container>
 
-<ng-template #icon>
-    <ng-content select="nxt-icon"></ng-content>
-</ng-template>
 <ng-template #content>
-    <ng-content></ng-content>
+    <ng-container *ngIf="textContent">
+        {{textContent}}
+    </ng-container>
+    <ng-content *ngIf="!textContent"></ng-content>
 </ng-template>

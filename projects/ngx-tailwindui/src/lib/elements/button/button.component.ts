@@ -1,56 +1,71 @@
-import { Component, ContentChild, Input, OnInit, TemplateRef } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { Component, Input, OnInit, TemplateRef } from "@angular/core";
+import { CommonModule, NgTemplateOutlet } from "@angular/common";
 import { Button } from "../../core/interfaces/button";
-import { IconDirective } from "../../core/directives/icon/icon.directive";
-import { Style, Variant } from "../../core/types/common";
-import { Radius } from "../../core/types/borders/border-radius";
+import { ClassName, Variant } from "../../core/types/common";
 import { FontSize } from "../../core/types/typography/font-size";
 import { Shadow } from "../../core/types/effects/box-shadow";
 import { BgColor } from "../../core/types/backgrounds/background-color";
 import { TextColor } from "../../core/types/typography/text-color";
 import { FontWeight } from "../../core/types/typography/font-weight";
 import { BorderColor } from "../../core/types/borders/border-color";
+import { BorderRadius } from "../../core/types/borders/border-radius";
+import { OutlineColor } from "../../core/types/borders/outline-color";
 
 @Component({
   selector: "nxt-button",
   standalone: true,
-  imports: [CommonModule, IconDirective],
+  imports: [
+    CommonModule,
+    NgTemplateOutlet
+  ],
   templateUrl: "./button.component.html"
 })
-export class ButtonComponent implements OnInit, Button {
+export class ButtonComponent<T extends Button> implements OnInit, Button {
+  @Input() textContent!: string
+  @Input() className!: ClassName
   @Input() variant: Variant = "filled"
-  @Input() radius: Radius = "rounded-md"
-  @Input() fontSize: FontSize = "text-xs"
+  @Input() borderRadius: BorderRadius = "rounded-md"
+  @Input() fontSize: FontSize = "text-base"
   @Input() shadow: Shadow = "shadow-none"
   @Input() bgColor: BgColor = "bg-green-800"
-  @Input() textColor: TextColor = "text-green-100"
+  @Input() textColor: TextColor = "text-neutral-100"
   @Input() fontWeight: FontWeight = "font-semibold"
-  @Input() borderColor: BorderColor = "border-emerald-800"
+  @Input() borderColor: BorderColor = "border-neutral-800"
+  @Input() outlineColor!: OutlineColor
 
-  @Input() extraStyle!: Style
-  @Input() customButtonRef!: TemplateRef<unknown>;
+  @Input() customButtonRef!: TemplateRef<T>;
 
-  @ContentChild(IconDirective) iconRef!: IconDirective;
-
-  protected style: Style = new Array()
+  protected style!: ClassName
 
   ngOnInit(): void {
+
+    if (this.variant === 'outlined') {
+      // this.outlineColor = "outline-neutral-800"
+    }
+    
     this.BuildStyle();
   }
 
   protected setColors() {
-    if (this.variant === "outlined"
-      || this.variant === "text") {
+    if (this.variant === "text" ||
+      this.variant === "outlined") {
       this.bgColor = "bg-transparent";
-      this.textColor = "text-emerald-800";
-      this.style.push("dark:text-emerald-200")
+      this.textColor = "text-neutral-800";
+      this.addClass("dark:text-neutral-200")
+    }
+    if (this.variant === 'outlined') {
+      
     }
   }
 
-  protected getBaseStyle(extra?: string) {
-    return `inline-flex gap-1 px-2 py-1.5 text-nowrap 
-      ${this.shadow} ${this.fontSize} ${this.fontWeight}
-      ${this.radius} ${this.bgColor} ${this.textColor} ${extra ?? ""}`
+  protected getBase(extra?: string) {
+    return `
+      inline-flex justify-center 
+      px-5 py-2.5 text-nowrap gap-2
+      ${this.shadow} ${this.borderRadius} 
+      ${this.fontSize} ${this.fontWeight}
+      ${this.bgColor} ${this.textColor} ${extra ?? ""}
+    `
   }
 
   protected BuildStyle() {
@@ -58,16 +73,20 @@ export class ButtonComponent implements OnInit, Button {
     this.setColors();
 
     switch (this.variant) {
-      case "text": this.style.push(this.getBaseStyle())
+      case "text": this.addClass(this.getBase())
         break;
-      case "filled": this.style.push(this.getBaseStyle())
+      case "filled": this.addClass(this.getBase())
         break;
-      case "outlined": this.style.push(this.getBaseStyle(`border ${this.borderColor}`))
+      case "outlined": this.addClass(this.getBase(`outline outline-1 ${this.outlineColor}`))
         break;
     }
 
-    if (this.extraStyle) {
-      this.style.push(...this.extraStyle)
+    if (this.className) {
+      this.addClass(this.className)
     }
+  }
+
+  private addClass(...arg: string[]) {
+    arg.forEach(c => this.style += ` ${c} `)
   }
 }
