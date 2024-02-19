@@ -21,69 +21,91 @@ import { OutlineColor } from "../../core/types/borders/outline-color";
   templateUrl: "./button.component.html"
 })
 export class ButtonComponent<T extends Button> implements OnInit, Button {
-  @Input() textContent!: string
-  @Input() className!: ClassName
-  @Input() variant: Variant = "filled"
-  @Input() borderRadius: BorderRadius = "rounded-md"
-  @Input() fontSize: FontSize = "text-base"
-  @Input() shadow: Shadow = "shadow-none"
-  @Input() bgColor: BgColor = "bg-green-800"
-  @Input() textColor: TextColor = "text-neutral-100"
-  @Input() fontWeight: FontWeight = "font-semibold"
-  @Input() borderColor: BorderColor = "border-neutral-800"
-  @Input() outlineColor!: OutlineColor
+  
+  @Input() variant: Variant = "filled";
+  @Input() textContent!: string;
+  @Input() className!: ClassName;
+  @Input() borderRadius!: BorderRadius;
+  @Input() fontSize!: FontSize;
+  @Input() shadow!: Shadow;
+  @Input() bgColor!: BgColor;
+  @Input() padding!: string;
+  @Input() textColor!: TextColor;
+  @Input() fontWeight!: FontWeight;
+  @Input() borderColor!: BorderColor;
+  @Input() outlineColor!: OutlineColor;
 
   @Input() customButtonRef!: TemplateRef<T>;
 
   protected style!: ClassName
 
   ngOnInit(): void {
-
-    if (this.variant === 'outlined') {
-      // this.outlineColor = "outline-neutral-800"
-    }
-    
-    this.BuildStyle();
-  }
-
-  protected setColors() {
-    if (this.variant === "text" ||
-      this.variant === "outlined") {
-      this.bgColor = "bg-transparent";
-      this.textColor = "text-neutral-800";
-      this.addClass("dark:text-neutral-200")
-    }
-    if (this.variant === 'outlined') {
-      
-    }
+    this.setStyle();
   }
 
   protected getBase(extra?: string) {
     return `
-      inline-flex justify-center 
-      px-5 py-2.5 text-nowrap gap-2
-      ${this.shadow} ${this.borderRadius} 
-      ${this.fontSize} ${this.fontWeight}
-      ${this.bgColor} ${this.textColor} ${extra ?? ""}
+      inline-flex justify-center gap-1 ${this.padding ?? 'px-6 p-1.5'} text-nowrap
+      ${this.fontSize ?? "text-sm"} ${this.fontWeight ?? "font-semibold"}
+      ${this.textColor} ${this.shadow ?? "shadow-none"} ${extra ?? ""}
     `
   }
 
-  protected BuildStyle() {
-
-    this.setColors();
+  protected setStyle() {
 
     switch (this.variant) {
-      case "text": this.addClass(this.getBase())
+      case "text": this.buildTextVariant()
         break;
-      case "filled": this.addClass(this.getBase())
+      case "filled": this.buildFilledVariant()
         break;
-      case "outlined": this.addClass(this.getBase(`outline outline-1 ${this.outlineColor}`))
+      case "outlined": this.buildOutlinedVariant()
         break;
     }
+  }
 
-    if (this.className) {
-      this.addClass(this.className)
+  private buildFilledVariant() {
+    if (!this.textColor) {
+      this.textColor = "text-neutral-200";
     }
+    this.borderRadius = this.borderRadius ?? "rounded-none";
+    this.addClass(this.borderRadius);
+
+    this.shadow = this.shadow ?? "shadow-none";
+    this.addClass(this.shadow);
+
+    this.bgColor = this.bgColor ?? "bg-indigo-600";
+    this.addClass(this.bgColor);
+
+    if (this.borderColor) {
+      this.addClass(`border border-1 ${this.borderColor}`);
+    }
+    this.addClass(this.getBase(this.className));
+  }
+
+  private buildOutlinedVariant() {
+    if (!this.textColor) {
+      this.textColor = "text-neutral-800";
+      this.addClass("dark:text-neutral-200");
+    }
+    if(!this.outlineColor){
+      this.outlineColor = "outline-neutral-800"
+      this.addClass("dark:outline-neutral-200")
+    }
+    this.addClass("outline outline-1")
+    this.addClass(this.outlineColor);
+
+    this.borderRadius = this.borderRadius ?? "rounded-none"
+    this.addClass(this.borderRadius);
+    
+    this.addClass(this.getBase(this.className))
+  }
+
+  private buildTextVariant() {
+    if (!this.textColor) {
+      this.textColor = "text-neutral-800";
+      this.addClass("dark:text-neutral-200");
+    }
+    this.addClass(this.getBase(this.className))
   }
 
   private addClass(...arg: string[]) {
