@@ -3,66 +3,49 @@
   <div class="grid mt-20 w-full md:mt-38 justify-center p-6">
     <h1 class="text-3xl font-bold my-6">Buttons</h1>
     <div
-      class="flex flex-wrap gap-16 p-10 bg-emerald-100 dark:bg-emerald-950 rounded-3xl border-emerald-200 dark:border-emerald-900 border">
-      <nxt-button radius="rounded-full" shadow="shadow-md" fontWeight="font-bold" textSize="text-lg" [extraStyle]="['bg-gradient-to-r', 'from-green-600 to-indigo-800', 'hover:from-pink-500 hover:to-yellow-500']">
-        Filled Button
+      class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
+      <nxt-button borderRadius="rounded-full">Filled variant</nxt-button>
+      <nxt-button borderRadius="rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-5">
+          <path
+            d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+        </svg>
+        Filled with icon
       </nxt-button>
-      <nxt-button radius="rounded-none">
-        <nxt-icon>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-            <path
-              d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-          </svg>
-        </nxt-icon>
+      <nxt-button variant="outlined" borderRadius="rounded-full">Outlined variant</nxt-button>
+      <nxt-button variant="outlined" borderRadius="rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16" fill="currentColor" class="size-5">
+          <path
+            d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+        </svg>
+        Outlined with icon
       </nxt-button>
-      <nxt-button radius="rounded-none">With Icon
-        <nxt-icon>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-            <path
-              d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
-          </svg>
-        </nxt-icon>
-      </nxt-button>
-      <nxt-button variant="outlined">Outlined Button</nxt-button>
-      <nxt-button variant="outlined">
-        <nxt-icon>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
-            <path fill-rule="evenodd"
-              d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z"
-              clip-rule="evenodd" />
-          </svg>
-        </nxt-icon>
-      </nxt-button>
-      <nxt-button variant="outlined">With Icon
-        <nxt-icon>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
-            <path fill-rule="evenodd"
-              d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z"
-              clip-rule="evenodd" />
-          </svg>
-        </nxt-icon>
-      </nxt-button>
-      <nxt-button variant="text">Text Button</nxt-button>
+      <nxt-button variant="text">Text variant</nxt-button>
       <nxt-button variant="text">
-        <nxt-icon>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
-            <path
-              d="M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z" />
-            <path
-              d="M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z" />
-          </svg>
-        </nxt-icon>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-5">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+        </svg>
+        Text with icon
       </nxt-button>
-      <nxt-button variant="text" textColor="text-emerald-800" [extraStyle]="['dark:text-emerald-100']">With Icon
-        <nxt-icon>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
-            <path
-              d="M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z" />
-            <path
-              d="M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z" />
-          </svg>
-        </nxt-icon>
+      <nxt-segmented-button></nxt-segmented-button>
+    </div>
+    <h1 class="text-3xl font-bold my-6">Customized Buttons</h1>
+    <div
+      class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
+      <nxt-button borderRadius="rounded-full" shadow="shadow-lg" fontWeight="font-bold"
+        className="bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500 min-[320px]:w-[235px] min-[375px]:w-[290px] min-[425px]:w-[340px]">
+        Filled variant
       </nxt-button>
+    </div>
+    <h1 class="text-3xl font-bold my-6">Icons</h1>
+    <div
+      class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
+      <nxt-icon>
+        <img src="assets/images/logos/logo-dark.svg" class="h-[24px]" alt="" srcset="">
+      </nxt-icon>
+      <nxt-icon variant="contained">My icon</nxt-icon>
     </div>
   </div>
 </router-outlet>

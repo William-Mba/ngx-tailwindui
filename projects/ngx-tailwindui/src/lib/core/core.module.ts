@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
-import { ButtonComponent } from '../elements/button/button.component';
+import { IconDirective } from './directives/icon/icon.directive';
 
-const components = [
-  ButtonComponent,
+const directives = [
+  IconDirective
 ]
 
-const directives = []
+const components = [
+  // IconComponeent
+]
 
 @NgModule({
   declarations: [
   ],
   imports: [
-    ...components
+    ...directives,
+    // ...components
   ],
   exports: [
-    ...components
+    ...directives,
+    // ...components
   ]
 })
 export class CoreModule { }

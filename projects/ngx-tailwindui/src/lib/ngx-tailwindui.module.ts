@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CoreModule } from "./core/core.module";
+import { ElementsModule } from './elements/elements.module';
 import { ComponentsModule } from './components/components.module';
+import { CoreModule } from './core/core.module';
 
 const modules = [
   CoreModule,
+  ElementsModule,
   ComponentsModule
 ]
 
