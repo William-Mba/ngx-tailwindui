@@ -1,6 +1,6 @@
 import { BorderRadius } from "./../../types/borders/border-radius";
 import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
-import { ClassName, IconVariant } from '../../types/common';
+import { IconVariant } from '../../types/common';
 import { BgColor } from '../../types/backgrounds/background-color';
 import { BorderColor } from '../../types/borders/border-color';
 import { OutlineColor } from '../../types/borders/outline-color';
@@ -11,7 +11,7 @@ import { OutlineColor } from '../../types/borders/outline-color';
 })
 export class IconDirective implements OnInit, Icon {
 
-  @Input() className!: ClassName;
+  @Input() className!: string;
   @Input() variant: IconVariant = 'standard';
   @Input() borderRadius!: BorderRadius;
   @Input() bgColor!: BgColor;
@@ -96,7 +96,7 @@ export interface Icon {
   margin: string
   borderColor: BorderColor
   outlineColor: OutlineColor
-  className: ClassName
+  className: string
   borderRadius: BorderRadius
   isActive: boolean
 }
