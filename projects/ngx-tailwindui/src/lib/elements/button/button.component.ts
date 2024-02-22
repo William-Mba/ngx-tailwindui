@@ -1,57 +1,66 @@
-import { Component, Input, OnInit, TemplateRef } from "@angular/core";
-import { CommonModule, NgTemplateOutlet } from "@angular/common";
-import { Button } from "../../core/interfaces/button";
-import { ClassName, Variant } from "../../core/types/common";
-import { FontSize } from "../../core/types/typography/font-size";
-import { Shadow } from "../../core/types/effects/box-shadow";
-import { BgColor } from "../../core/types/backgrounds/background-color";
-import { TextColor } from "../../core/types/typography/text-color";
-import { FontWeight } from "../../core/types/typography/font-weight";
-import { BorderColor } from "../../core/types/borders/border-color";
-import { BorderRadius } from "../../core/types/borders/border-radius";
-import { OutlineColor } from "../../core/types/borders/outline-color";
+import { Component, HostListener, Input, OnInit, inject } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { Variant } from "../../core/types/common";
+import { Button, IButton } from "./button";
+import { DisabledButton, EnabledButton } from "./button-states";
+import { Theme } from "../../core/shared/styles/theme";
 
 @Component({
   selector: "nxt-button",
   standalone: true,
-  imports: [
-    CommonModule,
-    NgTemplateOutlet
-  ],
+  imports: [CommonModule],
   templateUrl: "./button.component.html"
 })
-export class ButtonComponent<T extends Button> implements OnInit, Button {
-  
-  @Input() variant: Variant = "filled";
-  @Input() textContent!: string;
-  @Input() className!: ClassName;
-  @Input() borderRadius!: BorderRadius;
-  @Input() fontSize!: FontSize;
-  @Input() shadow!: Shadow;
-  @Input() bgColor!: BgColor;
-  @Input() padding!: string;
-  @Input() textColor!: TextColor;
-  @Input() fontWeight!: FontWeight;
-  @Input() borderColor!: BorderColor;
-  @Input() outlineColor!: OutlineColor;
+export class ButtonComponent extends Button implements OnInit, IButton {
 
-  @Input() customButtonRef!: TemplateRef<T>;
+  @Input() override enabled: boolean = true;
+  @Input() override override: boolean = false;
+  @Input() override variant: Variant = "filled";
+  @Input() override className: string = '';
 
-  protected style!: ClassName
+  private theme = inject(Theme)
+
+  constructor () {
+    super()
+  }
 
   ngOnInit(): void {
-    this.setStyle();
+
+    this.state = this.enabled === true ?
+      new EnabledButton(this) : new DisabledButton(this)
+
+    this.buildStyle();
   }
 
-  protected getBase(extra?: string) {
-    return `
-      inline-flex justify-center gap-1 ${this.padding ?? 'px-6 p-1.5'} text-nowrap
-      ${this.fontSize ?? "text-sm"} ${this.fontWeight ?? "font-semibold"}
-      ${this.textColor} ${this.shadow ?? "shadow-none"} ${extra ?? ""}
-    `
+
+  @HostListener('mouseenter') hover(): void {
+    this.state.hover();
   }
 
-  protected setStyle() {
+  @HostListener('focus') focus(): void {
+    this.state.focus();
+  }
+
+  @HostListener('click') oclick(): void {
+    this.state.click();
+  }
+
+  protected setBase() {
+    this.addClass(
+      this.padding ?? `${this.theme.sizing.width["w-full"]} 
+      ${this.theme.spacing.padding["py-1.5"]} 
+      ${this.theme.spacing.padding["p-3"]}`,
+      this.theme["flex-n-grid"].gap["gap-1.5"],
+      this.theme.layout.display["inline-flex"],
+      this.theme.typography["text-wrap"]["text-nowrap"],
+      this.theme.typography["font-weight"]["font-semibold"],
+      this.theme["flex-n-grid"]["justify-content"]["justify-center"],
+      this.override === false ? this.className : ''
+    )
+  }
+
+  protected buildStyle() {
+    this.setBase();
 
     switch (this.variant) {
       case "text": this.buildTextVariant()
@@ -64,51 +73,47 @@ export class ButtonComponent<T extends Button> implements OnInit, Button {
   }
 
   private buildFilledVariant() {
-    if (!this.textColor) {
-      this.textColor = "text-neutral-200";
+    if (this.override === true) {
+      this.addClass(this.className)
+      return;
     }
-    this.borderRadius = this.borderRadius ?? "rounded-none";
-    this.addClass(this.borderRadius);
-
-    this.shadow = this.shadow ?? "shadow-none";
-    this.addClass(this.shadow);
-
-    this.bgColor = this.bgColor ?? "bg-indigo-600";
-    this.addClass(this.bgColor);
-
-    if (this.borderColor) {
-      this.addClass(`border border-1 ${this.borderColor}`);
-    }
-    this.addClass(this.getBase(this.className));
+    this.addClass(
+      this.theme.backgrounds["bg-color"]["bg-indigo-600"],
+      this.theme.typography["text-color"]["text-neutral-200"],
+      this.theme.hover(this.theme.backgrounds["bg-opacity"]["bg-opacity-80"])
+    );
   }
 
   private buildOutlinedVariant() {
-    if (!this.textColor) {
-      this.textColor = "text-neutral-800";
-      this.addClass("dark:text-neutral-200");
-    }
-    if(!this.outlineColor){
-      this.outlineColor = "outline-neutral-800"
-      this.addClass("dark:outline-neutral-200")
-    }
-    this.addClass("outline outline-1")
-    this.addClass(this.outlineColor);
+    const outline = this.theme.borders["outline-style"].outline
+    const outline1 = this.theme.borders["outline-width"]["outline-1"]
+    const textNeutral800 = this.theme.typography["text-color"]["text-neutral-800"]
 
-    this.borderRadius = this.borderRadius ?? "rounded-none"
-    this.addClass(this.borderRadius);
-    
-    this.addClass(this.getBase(this.className))
+    this.addClass(
+      outline,
+      outline1,
+      textNeutral800,
+      'dark:text-neutral-200',
+      'dark:outline-neutral-600',
+      'dark:outline-opacity-5',
+      'hover:outline-neutral-400',
+      'hover:outline-opacity-25',
+      'dark:hover:outline-neutral-200',
+      'dark:hover:outline-opacity-5',
+    );
   }
 
   private buildTextVariant() {
-    if (!this.textColor) {
-      this.textColor = "text-neutral-800";
-      this.addClass("dark:text-neutral-200");
-    }
-    this.addClass(this.getBase(this.className))
-  }
+    const border = this.theme.borders["border-width"]["border"]
 
-  private addClass(...arg: string[]) {
-    arg.forEach(c => this.style += ` ${c} `)
+    this.addClass(
+      this.theme.hover(border),
+      'text-neutral-800',
+      'dark:text-neutral-200',
+      'hover:border-neutral-800',
+      'hover:border-opacity-25',
+      'dark:hover:border-neutral-200',
+      'dark:hover:border-opacity-25'
+    );
   }
 }
