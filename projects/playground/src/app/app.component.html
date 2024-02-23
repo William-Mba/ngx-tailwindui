@@ -4,7 +4,7 @@
     <h1 class="text-3xl font-bold my-6">Buttons</h1>
     <div class="grid gap-y-6 p-9 rounded-3xl border-dashed border-gray-600 border *:p-3 *:grid *:gap-3">
       <div class="col-span-2">
-        <nxt-button [override]="true" [className]="bgColor">Sign in</nxt-button>
+        <nxt-button>Sign in</nxt-button>
         <nxt-button [enabled]="false">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
             <path fill-rule="evenodd"
@@ -48,8 +48,8 @@
     <h1 class="text-3xl font-bold my-6">Buttons customized</h1>
     <div
       class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
-      <nxt-button
-        className="rounded-full shadow-lg font-bold bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500 min-[320px]:w-[235px] min-[375px]:w-[290px] min-[425px]:w-[340px]">
+      <nxt-button [override]="true"
+        className="inline-flex rounded-full shadow-lg font-bold bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500">
         Filled variant
       </nxt-button>
     </div>

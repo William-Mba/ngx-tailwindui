@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { IconDirective } from './directives/icon/icon.directive';
+import { IconDirective } from './shared/directives/icon/icon.directive';
 
 const directives = [
   IconDirective

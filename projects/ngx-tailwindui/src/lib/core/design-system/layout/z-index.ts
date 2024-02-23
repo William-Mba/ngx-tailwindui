@@ -1,0 +1,33 @@
+export const ZIndex = {
+    'z-0': 'z-0',
+    'z-10': 'z-10',
+    'z-20': 'z-20',
+    'z-30': 'z-30',
+    'z-40': 'z-40',
+    'z-50': 'z-50',
+    'z-auto': 'z-auto',
+
+    'hover:z-0': 'hover:z-0',
+    'hover:z-10': 'hover:z-10',
+    'hover:z-20': 'hover:z-20',
+    'hover:z-30': 'hover:z-30',
+    'hover:z-40': 'hover:z-40',
+    'hover:z-50': 'hover:z-50',
+    'hover:z-auto': 'hover:z-auto',
+
+    'focus:z-0': 'focus:z-0',
+    'focus:z-10': 'focus:z-10',
+    'focus:z-20': 'focus:z-20',
+    'focus:z-30': 'focus:z-30',
+    'focus:z-40': 'focus:z-40',
+    'focus:z-50': 'focus:z-50',
+    'focus:z-auto': 'focus:z-auto',
+
+    'active:z-0': 'active:z-0',
+    'active:z-10': 'active:z-10',
+    'active:z-20': 'active:z-20',
+    'active:z-30': 'active:z-30',
+    'active:z-40': 'active:z-40',
+    'active:z-50': 'active:z-50',
+    'active:z-auto': 'active:z-auto',
+} as const

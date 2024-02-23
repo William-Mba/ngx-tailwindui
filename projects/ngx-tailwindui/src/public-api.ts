@@ -15,9 +15,9 @@ export * from './lib/ngx-tailwindui.module';
 export * from './lib/core/directives/icon/icon.directive'
 
 //----------------------------- core/shared
-export * from './lib/core/shared/array-helper.shared'
+export * from './lib/core/shared/helpers/array-helper'
 
-export * from './lib/core/shared/styles/theme'
+export * from './lib/core/shared/styles/design-system'
 
 //----------------------------- core/types
 export * from './lib/core/types/colors-palette'

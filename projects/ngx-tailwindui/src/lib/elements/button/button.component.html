@@ -1,16 +1,16 @@
 <ng-container [ngSwitch]="variant">
     <ng-template *ngSwitchCase="'filled'" #filled [ngTemplateOutlet]="templateRef || filled">
-        <button [ngClass]="style">
+        <button [ngClass]="classNames">
             <ng-container [ngTemplateOutlet]="content"></ng-container>
         </button>
     </ng-template>
     <ng-template *ngSwitchCase="'outlined'" #outlined [ngTemplateOutlet]="templateRef || outlined">
-        <button [ngClass]="style">
+        <button [ngClass]="classNames">
             <ng-container [ngTemplateOutlet]="content"></ng-container>
         </button>
     </ng-template>
     <ng-template *ngSwitchCase="'text'" #text [ngTemplateOutlet]="templateRef || text">
-        <button [ngClass]="style">
+        <button [ngClass]="classNames">
             <ng-container [ngTemplateOutlet]="content"></ng-container>
         </button>
     </ng-template>

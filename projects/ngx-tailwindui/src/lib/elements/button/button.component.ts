@@ -1,9 +1,8 @@
-import { Component, HostListener, Input, OnInit, inject } from "@angular/core";
+import { Component, HostListener, Input, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Variant } from "../../core/types/common";
 import { Button, IButton } from "./button";
-import { DisabledButton, EnabledButton } from "./button-states";
-import { Theme } from "../../core/shared/styles/theme";
+import { DisabledButton, EnabledButton } from "./states";
 
 @Component({
   selector: "nxt-button",
@@ -18,102 +17,126 @@ export class ButtonComponent extends Button implements OnInit, IButton {
   @Input() override variant: Variant = "filled";
   @Input() override className: string = '';
 
-  private theme = inject(Theme)
+  private gap = this.ds["flex-n-grid"].gap["gap-1.5"];
+  private display = this.ds.layout.display["inline-flex"];
+  private textWrap = this.ds.typography["text-wrap"]["text-nowrap"];
+  private fontWeight = this.ds.typography["font-weight"]["font-semibold"];
+  private justifyContent = this.ds["flex-n-grid"]["justify-content"]["justify-center"];
+  private textColor!: string;
+  private textColorDark!: string;
 
   constructor () {
     super()
   }
 
   ngOnInit(): void {
-
-    this.state = this.enabled === true ?
-      new EnabledButton(this) : new DisabledButton(this)
-
     this.buildStyle();
+    this.state = this.enabled ? new EnabledButton(this) : new DisabledButton(this)
   }
 
-
-  @HostListener('mouseenter') hover(): void {
+  @HostListener('mouseenter') override hover(): void {
     this.state.hover();
   }
 
-  @HostListener('focus') focus(): void {
+  @HostListener('dblclick') override focus(): void {
     this.state.focus();
   }
 
-  @HostListener('click') oclick(): void {
+  @HostListener('click') override click(): void {
     this.state.click();
   }
 
   protected setBase() {
-    this.addClass(
-      this.padding ?? `${this.theme.sizing.width["w-full"]} 
-      ${this.theme.spacing.padding["py-1.5"]} 
-      ${this.theme.spacing.padding["p-3"]}`,
-      this.theme["flex-n-grid"].gap["gap-1.5"],
-      this.theme.layout.display["inline-flex"],
-      this.theme.typography["text-wrap"]["text-nowrap"],
-      this.theme.typography["font-weight"]["font-semibold"],
-      this.theme["flex-n-grid"]["justify-content"]["justify-center"],
-      this.override === false ? this.className : ''
-    )
+    if (this.override) {
+      this.addClass(this.className)
+      return;
+    }
+    else {
+      if (this.padding) {
+        this.addClass(this.padding)
+      }
+      else {
+        this.addClass(
+          this.ds.spacing.padding["p-3"],
+          this.ds.spacing.padding["py-1.5"]
+        )
+      }
+      if (this.width) {
+        this.addClass(this.width)
+      }
+      else {
+        this.addClass(
+          this.ds.sizing.width["w-full"]
+        )
+      }
+      if (this.margin) {
+        this.addClass(this.margin)
+      }
+
+
+      this.addClass(
+        this.gap,
+        this.display,
+        this.textWrap,
+        this.fontWeight,
+        this.justifyContent,
+      )
+    }
   }
 
   protected buildStyle() {
     this.setBase();
 
-    switch (this.variant) {
-      case "text": this.buildTextVariant()
-        break;
-      case "filled": this.buildFilledVariant()
-        break;
-      case "outlined": this.buildOutlinedVariant()
-        break;
+    if (!this.override) {
+      switch (this.variant) {
+        case "text": this.buildTextVariant()
+          break;
+        case "filled": this.buildFilledVariant()
+          break;
+        case "outlined": this.buildOutlinedVariant()
+          break;
+      }
     }
   }
 
   private buildFilledVariant() {
-    if (this.override === true) {
-      this.addClass(this.className)
-      return;
-    }
-    this.addClass(
-      this.theme.backgrounds["bg-color"]["bg-indigo-600"],
-      this.theme.typography["text-color"]["text-neutral-200"],
-      this.theme.hover(this.theme.backgrounds["bg-opacity"]["bg-opacity-80"])
-    );
+    const bgColor = this.ds.backgrounds["bg-color"]["bg-indigo-600"]
+    this.textColor = this.ds.typography["text-color"]["text-neutral-200"]
+
+    this.addClass(bgColor, this.textColor);
   }
 
   private buildOutlinedVariant() {
-    const outline = this.theme.borders["outline-style"].outline
-    const outline1 = this.theme.borders["outline-width"]["outline-1"]
-    const textNeutral800 = this.theme.typography["text-color"]["text-neutral-800"]
+    const outlineStyle = this.ds.borders["outline-style"].outline
+    const outlineWidth = this.ds.borders["outline-width"]["outline-1"]
+    const outlineColorDark = `dark:${this.ds.borders["outline-color"]['outline-neutral-600']}` as const
+    this.textColor = this.ds.typography["text-color"]["text-neutral-800"]
+    this.textColorDark = `dark:${this.ds.typography["text-color"]["text-neutral-200"]}`
 
     this.addClass(
-      outline,
-      outline1,
-      textNeutral800,
-      'dark:text-neutral-200',
-      'dark:outline-neutral-600',
-      'dark:outline-opacity-5',
-      'hover:outline-neutral-400',
-      'hover:outline-opacity-25',
-      'dark:hover:outline-neutral-200',
-      'dark:hover:outline-opacity-5',
+      outlineStyle,
+      outlineWidth,
+      outlineColorDark,
+      this.textColor,
+      this.textColorDark,
     );
   }
 
   private buildTextVariant() {
-    const border = this.theme.borders["border-width"]["border"]
-
+    const borderHover = this.ds.borders["border-width"]["hover:border"]
+    const textColor = this.ds.typography["text-color"]["text-neutral-800"]
+    const textColorDark = this.ds.typography["text-color"]["dark:text-neutral-200"]
+    const borderColorHover = this.ds.borders["border-color"]["hover:border-neutral-800"]
+    const borderOpacityHover = this.ds.borders["border-opacity"]["hover:border-opacity-25"]
+    const borderColorDarkHover = this.ds.borders["border-color"]["dark:hover:border-neutral-700"]
+    
     this.addClass(
-      this.theme.hover(border),
-      'text-neutral-800',
-      'dark:text-neutral-200',
-      'hover:border-neutral-800',
-      'hover:border-opacity-25',
-      'dark:hover:border-neutral-200',
-      'dark:hover:border-opacity-25'
+      textColor,
+      borderHover,
+      textColorDark,
+      borderColorHover,
+      borderOpacityHover,
+      borderColorDarkHover
     );
   }
 }
