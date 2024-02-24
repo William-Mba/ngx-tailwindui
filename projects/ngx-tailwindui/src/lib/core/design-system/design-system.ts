@@ -1,4 +1,3 @@
-import { Injectable } from "@angular/core"
 import { Backgrounds } from "./backgrounds"
 import { Behaviors } from "./behaviors"
 import { Borders } from "./borders"
