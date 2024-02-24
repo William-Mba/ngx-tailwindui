@@ -7,5 +7,35 @@ export const Rotate = {
     'rotate-12': 'rotate-12',
     'rotate-45': 'rotate-45',
     'rotate-90': 'rotate-90',
-    'rotate-180': 'rotate-180'
+    'rotate-180': 'rotate-180',
+
+    'hover:rotate-0': 'hover:rotate-0',
+    'hover:rotate-1': 'hover:rotate-1',
+    'hover:rotate-2': 'hover:rotate-2',
+    'hover:rotate-3': 'hover:rotate-3',
+    'hover:rotate-6': 'hover:rotate-6',
+    'hover:rotate-12': 'hover:rotate-12',
+    'hover:rotate-45': 'hover:rotate-45',
+    'hover:rotate-90': 'hover:rotate-90',
+    'hover:rotate-180': 'hover:rotate-180',
+
+    'focus:rotate-0': 'focus:rotate-0',
+    'focus:rotate-1': 'focus:rotate-1',
+    'focus:rotate-2': 'focus:rotate-2',
+    'focus:rotate-3': 'focus:rotate-3',
+    'focus:rotate-6': 'focus:rotate-6',
+    'focus:rotate-12': 'focus:rotate-12',
+    'focus:rotate-45': 'focus:rotate-45',
+    'focus:rotate-90': 'focus:rotate-90',
+    'focus:rotate-180': 'focus:rotate-180',
+
+    'active:rotate-0': 'active:rotate-0',
+    'active:rotate-1': 'active:rotate-1',
+    'active:rotate-2': 'active:rotate-2',
+    'active:rotate-3': 'active:rotate-3',
+    'active:rotate-6': 'active:rotate-6',
+    'active:rotate-12': 'active:rotate-12',
+    'active:rotate-45': 'active:rotate-45',
+    'active:rotate-90': 'active:rotate-90',
+    'active:rotate-180': 'active:rotate-180'
 } as const

@@ -1,9 +1,9 @@
-import { BorderRadius } from "./../../types/borders/border-radius";
 import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
-import { IconVariant } from '../../types/common';
-import { BgColor } from '../../types/backgrounds/background-color';
-import { BorderColor } from '../../types/borders/border-color';
-import { OutlineColor } from '../../types/borders/outline-color';
+import { BgColor } from '../../../types/backgrounds/background-color';
+import { BorderColor } from '../../../types/borders/border-color';
+import { BorderRadius } from '../../../types/borders/border-radius';
+import { OutlineColor } from '../../../types/borders/outline-color';
+import { IconVariant } from '../../../types/common';
 
 @Directive({
   selector: 'nxt-icon,[nxt-icon]',

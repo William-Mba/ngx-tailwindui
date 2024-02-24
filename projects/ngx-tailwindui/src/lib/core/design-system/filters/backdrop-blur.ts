@@ -7,4 +7,32 @@ export const BackdropBlur = {
     'backdrop-blur-2xl': 'backdrop-blur-2xl',
     'backdrop-blur-3xl': 'backdrop-blur-3xl',
     'backdrop-blur-none': 'backdrop-blur-none',
+
+    'hover:backdrop-blur-sm': 'hover:backdrop-blur-sm',
+    'hover:backdrop-blur': 'hover:backdrop-blur',
+    'hover:backdrop-blur-md': 'hover:backdrop-blur-md',
+    'hover:backdrop-blur-lg': 'hover:backdrop-blur-lg',
+    'hover:backdrop-blur-xl': 'hover:backdrop-blur-xl',
+    'hover:backdrop-blur-2xl': 'hover:backdrop-blur-2xl',
+    'hover:backdrop-blur-3xl': 'hover:backdrop-blur-3xl',
+    'hover:backdrop-blur-none': 'hover:backdrop-blur-none',
+
+    'focus:backdrop-blur-sm': 'focus:backdrop-blur-sm',
+    'focus:backdrop-blur': 'focus:backdrop-blur',
+    'focus:backdrop-blur-md': 'focus:backdrop-blur-md',
+    'focus:backdrop-blur-lg': 'focus:backdrop-blur-lg',
+    'focus:backdrop-blur-xl': 'focus:backdrop-blur-xl',
+    'focus:backdrop-blur-2xl': 'focus:backdrop-blur-2xl',
+    'focus:backdrop-blur-3xl': 'focus:backdrop-blur-3xl',
+    'focus:backdrop-blur-none': 'focus:backdrop-blur-none',
+
+    'active:backdrop-blur-sm': 'active:backdrop-blur-sm',
+    'active:backdrop-blur': 'active:backdrop-blur',
+    'active:backdrop-blur-md': 'active:backdrop-blur-md',
+    'active:backdrop-blur-lg': 'active:backdrop-blur-lg',
+    'active:backdrop-blur-xl': 'active:backdrop-blur-xl',
+    'active:backdrop-blur-2xl': 'active:backdrop-blur-2xl',
+    'active:backdrop-blur-3xl': 'active:backdrop-blur-3xl',
+    'active:backdrop-blur-none': 'active:backdrop-blur-none',
+
 } as const
