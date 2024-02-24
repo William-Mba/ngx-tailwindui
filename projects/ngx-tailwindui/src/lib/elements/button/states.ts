@@ -44,6 +44,29 @@ export class EnabledButton extends ButtonState implements IEnabledButton {
 
     override hover(): void {
         console.log('hovered');
+
+        const transition = this.button.ds.behaviors["transition-property"]["hover:transition"]
+        const transitionDelay = this.button.ds.behaviors["transition-delay"]["hover:delay-150"]
+        const transitionDuration = this.button.ds.behaviors["transition-duration"]["duration-150"]
+        const translate = this.button.ds.transforms.translate["hover:-translate-y-0.5"]
+        const scale = this.button.ds.transforms.scale["hover:scale-105"]
+        const transitionTimingFunc = this.button.ds.behaviors["transition-timing-function"]["ease-in-out"]
+
+        const opacity = this.button.ds.effects.opacity["hover:opacity-85"]
+        const shadow = this.button.ds.effects["box-shadow"]["hover:shadow-xl"]
+        const shadowColor = this.button.ds.effects["box-shadow-color"]["hover:shadow-neutral-900"]
+
+        this.button.addClass(
+            transition,
+            transitionDelay,
+            transitionDuration,
+            transitionTimingFunc,
+            translate,
+            scale,
+            opacity,
+            shadow,
+            shadowColor
+        )
         this.button.changeState(new HoveredButton(this.button))
     }
 
@@ -64,12 +87,6 @@ export class EnabledButton extends ButtonState implements IEnabledButton {
 }
 
 export class HoveredButton extends ButtonState implements IHoveredButton {
-
-    constructor (btn: Button) {
-        super(btn)
-        const opacity = this.button.ds.effects.opacity["hover:opacity-85"]
-        this.button.addClass(opacity)
-    }
 
     override click(): void {
         const ring = this.button.ds.borders["ring-width"]["active:ring-4"]
@@ -116,7 +133,7 @@ export class DisabledButton extends ButtonState implements IDisabledButton {
 
     constructor (btn: Button) {
         super(btn)
-        const opacityOnDisabled = this.button.ds.effects.opacity["opacity-45"]
+        const opacityOnDisabled = this.button.ds.effects.opacity["opacity-35"]
         const pointerEvents = this.button.ds.interactivity["pointer-events"]["pointer-events-none"]
         this.button.addClass(opacityOnDisabled, pointerEvents)
     }

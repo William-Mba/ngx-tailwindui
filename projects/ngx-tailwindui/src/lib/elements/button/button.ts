@@ -1,8 +1,8 @@
 import { Variant } from "../../core/types/common";
-import { IElement } from "../../core/shared/abstractions/element";
 import { TemplateRef } from "@angular/core";
-import { DesignSystem } from "../../core/shared/styles/design-system";
 import { IButtonState } from "./states";
+import { IElement } from "../../core/abstractions/element";
+import { DesignSystem } from "../../core/design-system/design-system";
 
 export interface IButton extends IElement<IButton> {
     variant: Variant,
