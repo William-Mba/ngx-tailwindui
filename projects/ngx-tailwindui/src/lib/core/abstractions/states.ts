@@ -13,7 +13,7 @@ export interface IFocused {
 export interface IActived {
     active(): void
 }
-export interface IClicked {
+export interface IPressed {
     click(): void
 }
 export interface IDragged {

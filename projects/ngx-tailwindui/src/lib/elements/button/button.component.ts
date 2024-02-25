@@ -3,7 +3,6 @@ import { CommonModule } from "@angular/common";
 import { Variant } from "../../core/types/common";
 import { Button, IButton } from "./button";
 import { DisabledButton, EnabledButton } from "./button.states";
-import { keyframes } from "@angular/animations";
 
 @Component({
   selector: "nxt-button",
@@ -17,6 +16,9 @@ export class ButtonComponent extends Button implements OnInit, IButton {
   @Input() override override: boolean = false;
   @Input() override variant: Variant = "filled";
   @Input() override className: string = '';
+  @Input() override padding!: string;
+  @Input() override margin!: string;
+  @Input() override width!: string;
 
   constructor () {
     super()

@@ -29,11 +29,11 @@ export class IconDirective implements OnInit, Icon {
   @HostListener('click') onClick() {
     this.isActive = this.isActive === false ? true : false
 
-    this.el.nativeElement.classList.toggle('outline-indigo-400', this.isActive)
-    this.el.nativeElement.classList.toggle('dark:outline-indigo-200', this.isActive)
+    this.el.nativeElement.classList.toggle('hover:outline-indigo-400', this.isActive)
+    this.el.nativeElement.classList.toggle('dark:hover:outline-indigo-200', this.isActive)
 
     if (this.variant === 'standard') {
-      this.el.nativeElement.classList.toggle('dark:outline-indigo-950'); // toggle initialized value
+      this.el.nativeElement.classList.toggle('dark:hover:outline-indigo-950'); // toggle initialized value
     }
 
     if (this.variant === 'contained') {
