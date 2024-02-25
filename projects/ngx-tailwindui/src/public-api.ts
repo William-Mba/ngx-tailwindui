@@ -14,6 +14,7 @@ export * from './lib/ngx-tailwindui.module';
 export * from './lib/core/design-system/design-system'
 
 export * from './lib/core/shared/directives/icon/icon.directive'
+export * from './lib/core/shared/directives/ripple/ripple.directive'
 
 export * from './lib/core/types/colors-palette'
 export * from './lib/core/types/common'
