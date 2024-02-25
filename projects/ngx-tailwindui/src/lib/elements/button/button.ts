@@ -1,6 +1,6 @@
 import { Variant } from "../../core/types/common";
 import { TemplateRef } from "@angular/core";
-import { IButtonState } from "./states";
+import { IButtonState } from "./button.states";
 import { IElement } from "../../core/abstractions/element";
 import { DesignSystem } from "../../core/design-system/design-system";
 
@@ -43,7 +43,7 @@ export abstract class Button implements IButton {
         })
     }
 
-    changeState(newState: IButtonState) {
+    setState(newState: IButtonState) {
         this.state = newState
     }
 

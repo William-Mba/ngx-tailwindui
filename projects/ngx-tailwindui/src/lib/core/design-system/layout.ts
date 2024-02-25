@@ -9,6 +9,7 @@ import { ObjectPosition } from "./layout/object-position";
 import { Position } from "./layout/position";
 import { Visibility } from "./layout/visibility";
 import { ZIndex } from "./layout/z-index";
+import { Overflow } from "./layout/overflow";
 
 export const Layout = {
     'aspect-ratio': AspectRatio,
@@ -18,6 +19,7 @@ export const Layout = {
     float: Float,
     'object-fit': ObjectFit,
     'object-position': ObjectPosition,
+    'overflow': Overflow,
     'placement': Placement,
     'position': Position,
     'visibility': Visibility,

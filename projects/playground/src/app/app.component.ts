@@ -8,7 +8,7 @@ import { ThemeService } from './theme.service';
 })
 export class AppComponent {
   private themeService = inject(ThemeService)
-
+  active = true
   ngOnInit(): void {
     this.themeService.initializeSettings();
   }

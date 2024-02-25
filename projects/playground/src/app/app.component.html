@@ -1,11 +1,11 @@
 <app-menu></app-menu>
 <router-outlet>
-  <div class="grid mt-20 w-full md:mt-38 justify-center p-6">
+  <div class="grid w-full md:mt-38 justify-center p-6">
     <h1 class="text-3xl font-bold my-6">Buttons</h1>
     <div class="grid gap-y-6 p-9 rounded-3xl border-dashed border-gray-600 border *:p-3 *:grid *:gap-3">
       <div class="col-span-2">
-        <nxt-button>Sign in</nxt-button>
-        <nxt-button [enabled]="false">
+        <nxt-button nxt-ripple [enabled]="true" className="rounded-full">Sign in</nxt-button>
+        <nxt-button nxt-ripple [enabled]="false">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
             <path fill-rule="evenodd"
               d="M3.5 2A1.5 1.5 0 0 0 2 3.5v9A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 12.5 4H9.621a1.5 1.5 0 0 1-1.06-.44L7.439 2.44A1.5 1.5 0 0 0 6.38 2H3.5ZM8 6a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0v-1.5h-1.5a.75.75 0 0 1 0-1.5h1.5v-1.5A.75.75 0 0 1 8 6Z"
@@ -28,7 +28,7 @@
       </div>
       <div>
         <nxt-button variant="text">Back</nxt-button>
-        <nxt-button variant="text">
+        <nxt-button nxt-ripple variant="text">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
             <path
               d="M12 6a2 2 0 1 0-1.994-1.842L5.323 6.5a2 2 0 1 0 0 3l4.683 2.342a2 2 0 1 0 .67-1.342L5.995 8.158a2.03 2.03 0 0 0 0-.316L10.677 5.5c.353.311.816.5 1.323.5Z" />
@@ -40,7 +40,7 @@
     <h1 class="text-3xl font-bold my-6">Buttons group</h1>
     <div
       class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
-      <nxt-button
+      <nxt-button nxt-ripple
         className="rounded-full shadow-lg font-bold bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500 min-[320px]:w-[235px] min-[375px]:w-[290px] min-[425px]:w-[340px]">
         Filled variant
       </nxt-button>
@@ -48,7 +48,7 @@
     <h1 class="text-3xl font-bold my-6">Buttons customized</h1>
     <div
       class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
-      <nxt-button [override]="true"
+      <nxt-button
         className="inline-flex rounded-full shadow-lg font-bold bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500">
         Filled variant
       </nxt-button>

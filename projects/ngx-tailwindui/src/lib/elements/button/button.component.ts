@@ -2,7 +2,8 @@ import { Component, HostListener, Input, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Variant } from "../../core/types/common";
 import { Button, IButton } from "./button";
-import { DisabledButton, EnabledButton } from "./states";
+import { DisabledButton, EnabledButton } from "./button.states";
+import { keyframes } from "@angular/animations";
 
 @Component({
   selector: "nxt-button",
@@ -16,14 +17,6 @@ export class ButtonComponent extends Button implements OnInit, IButton {
   @Input() override override: boolean = false;
   @Input() override variant: Variant = "filled";
   @Input() override className: string = '';
-
-  private gap = this.ds["flex-n-grid"].gap["gap-1.5"];
-  private display = this.ds.layout.display["inline-flex"];
-  private textWrap = this.ds.typography["text-wrap"]["text-nowrap"];
-  private fontWeight = this.ds.typography["font-weight"]["font-semibold"];
-  private justifyContent = this.ds["flex-n-grid"]["justify-content"]["justify-center"];
-  private textColor!: string;
-  private textColorDark!: string;
 
   constructor () {
     super()
@@ -47,41 +40,53 @@ export class ButtonComponent extends Button implements OnInit, IButton {
   }
 
   protected setBase() {
+    
     if (this.override) {
-      this.addClass(this.className)
+      this.addClass(this.className);
       return;
     }
     else {
       if (this.padding) {
-        this.addClass(this.padding)
+        this.addClass(this.padding);
       }
       else {
         this.addClass(
           this.ds.spacing.padding["p-3"],
           this.ds.spacing.padding["py-1.5"]
-        )
+        );
       }
       if (this.width) {
-        this.addClass(this.width)
+        this.addClass(this.width);
       }
       else {
         this.addClass(
           this.ds.sizing.width["w-full"]
-        )
+        );
       }
       if (this.margin) {
-        this.addClass(this.margin)
+        this.addClass(this.margin);
       }
 
+      const gap = this.ds["flex-n-grid"].gap["gap-1.5"];
+      const display = this.ds.layout.display["inline-flex"];
+      const position = this.ds.layout.position.relative;
+      const overflow = this.ds.layout.overflow["overflow-hidden"]
+      const textWrap = this.ds.typography["text-wrap"]["text-nowrap"];
+      const fontWeight = this.ds.typography["font-weight"]["font-semibold"];
+      const justifyContent = this.ds["flex-n-grid"]["justify-content"]["justify-center"];
 
       this.addClass(
-        this.gap,
-        this.display,
-        this.textWrap,
-        this.fontWeight,
-        this.justifyContent,
-      )
+        gap,
+        display,
+        textWrap,
+        position,
+        overflow,
+        fontWeight,
+        justifyContent,
+      );
     }
+
+    this.addClass(this.className)
   }
 
   protected buildStyle() {
@@ -100,43 +105,37 @@ export class ButtonComponent extends Button implements OnInit, IButton {
   }
 
   private buildFilledVariant() {
-    const bgColor = this.ds.backgrounds["bg-color"]["bg-indigo-600"]
-    this.textColor = this.ds.typography["text-color"]["text-neutral-200"]
+    const bgColor = this.ds.backgrounds["bg-color"]["bg-indigo-800"]
+    const textColor = this.ds.typography["text-color"]["text-neutral-200"]
 
-    this.addClass(bgColor, this.textColor);
+    this.addClass(bgColor, textColor);
   }
 
   private buildOutlinedVariant() {
     const outlineStyle = this.ds.borders["outline-style"].outline
     const outlineWidth = this.ds.borders["outline-width"]["outline-1"]
-    const outlineColorDark = `dark:${this.ds.borders["outline-color"]['outline-neutral-600']}` as const
-    this.textColor = this.ds.typography["text-color"]["text-neutral-800"]
-    this.textColorDark = `dark:${this.ds.typography["text-color"]["text-neutral-200"]}`
+    const outlineColor = this.ds.borders["outline-color"]['outline-neutral-400']
+    const outlineColorDark = this.ds.borders["outline-color"]['dark:outline-neutral-600']
+    const textColor = this.ds.typography["text-color"]["text-neutral-800"]
+    const textColorDark = this.ds.typography["text-color"]["dark:text-neutral-200"]
 
     this.addClass(
       outlineStyle,
       outlineWidth,
+      outlineColor,
       outlineColorDark,
-      this.textColor,
-      this.textColorDark,
+      textColor,
+      textColorDark,
     );
   }
 
   private buildTextVariant() {
-    const borderHover = this.ds.borders["border-width"]["hover:border"]
     const textColor = this.ds.typography["text-color"]["text-neutral-800"]
     const textColorDark = this.ds.typography["text-color"]["dark:text-neutral-200"]
-    const borderColorHover = this.ds.borders["border-color"]["hover:border-neutral-800"]
-    const borderOpacityHover = this.ds.borders["border-opacity"]["hover:border-opacity-25"]
-    const borderColorDarkHover = this.ds.borders["border-color"]["dark:hover:border-neutral-700"]
-    
+
     this.addClass(
       textColor,
-      borderHover,
       textColorDark,
-      borderColorHover,
-      borderOpacityHover,
-      borderColorDarkHover
     );
   }
 }

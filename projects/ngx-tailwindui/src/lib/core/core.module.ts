@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { IconDirective } from './shared/directives/icon/icon.directive';
+import { RippleDirective } from './shared/directives/ripple/ripple.directive';
 
 const directives = [
-  IconDirective
+  IconDirective,
+  RippleDirective
 ]
 
 const components = [
@@ -10,8 +12,6 @@ const components = [
 ]
 
 @NgModule({
-  declarations: [
-  ],
   imports: [
     ...directives,
     // ...components
