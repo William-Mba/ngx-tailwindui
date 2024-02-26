@@ -7,6 +7,7 @@ import { Size } from "../types/sizing/size";
 import { Color } from "../types/colors-palette";
 import { BgColor } from "../types/backgrounds/background-color";
 import { BorderRadius } from "../types/borders/border-radius";
+import { DesignSystem } from "../design-system/design-system";
 
 export interface IElement {
     addClass(...arg: string[]): void,
@@ -30,6 +31,9 @@ export abstract class Element<T> implements IElement {
     classNames: string[] = [];
     enabled: boolean = true;
     templateRef!: TemplateRef<T>;
+    ds = DesignSystem;
+
+    protected constructor(){}
 
     hasClass(className: string): boolean {
         return (this.className.search(className) === 0);
