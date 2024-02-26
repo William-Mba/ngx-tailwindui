@@ -23,24 +23,24 @@ export class ButtonComponent extends Button implements OnInit {
   @Input() override margin!: Margin;
   @Input() override width!: Width;
 
-  constructor () {
+  constructor() {
     super()
   }
 
   ngOnInit(): void {
     this.buildStyle();
-    this.state = this.enabled ? new EnabledButton(this) : new DisabledButton(this)
+    this.setState(this.enabled ? new EnabledButton(this) : new DisabledButton(this))
   }
 
-  @HostListener('mouseenter') override hover(): void {
+  @HostListener('mouseenter') onmouseenter(): void {
     this.state.hover();
   }
 
-  @HostListener('mousedown') override press(): void {
+  @HostListener('mousedown') onmousedown(): void {
     this.state.press();
   }
 
-  @HostListener('mouseup') override focus(): void {
+  @HostListener('mouseup') onmouseup(): void {
     this.state.focus();
   }
 
