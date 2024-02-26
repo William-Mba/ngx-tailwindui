@@ -16,7 +16,7 @@ export class RippleDirective {
     if (!this.enabled) return;
 
     const target = event.target as HTMLElement;
-    
+
     const targetposition = this.ds.layout.position.relative;
     const overflow = this.ds.layout.overflow["overflow-hidden"];
     target.classList.toggle(overflow, this.enabled)
@@ -27,11 +27,11 @@ export class RippleDirective {
     const diameter = Math.max(target.clientWidth, target.clientHeight);
     const radius = diameter / 2;
 
+    span.style.position = this.ds.layout.position.absolute;
     span.style.width = span.style.height = `${diameter}px`;
     span.style.top = `${event.pageY - (target.offsetTop + radius)}px`;
     span.style.left = `${event.pageX - (target.offsetLeft + radius)}px`;
 
-    const position = this.ds.layout.position.absolute;
     const scale = this.ds.transforms.scale['scale-50'];
     const display = this.ds.layout.display['inline-flex'];
     const opacity = this.ds.effects.opacity['opacity-50'];
@@ -40,8 +40,7 @@ export class RippleDirective {
     const animation = this.ds.behaviors.animation['animate-ping'];
     const borderRadius = this.ds.borders['border-radius']['rounded-full'];
 
-    span.classList.add(position, scale, display,
-      opacity, bgColor, bgColorDark, animation, borderRadius);
+    span.classList.add(scale, display, opacity, bgColor, bgColorDark, animation, borderRadius);
 
     target.appendChild(span);
 
