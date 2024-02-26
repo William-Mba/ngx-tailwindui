@@ -10,9 +10,11 @@ import { Position } from "./layout/position";
 import { Visibility } from "./layout/visibility";
 import { ZIndex } from "./layout/z-index";
 import { Overflow } from "./layout/overflow";
+import { BoxSizing } from "./layout/box-sizing";
 
 export const Layout = {
     'aspect-ratio': AspectRatio,
+    'box-sizing': BoxSizing,
     columns: Columns,
     container: Container,
     display: Display,

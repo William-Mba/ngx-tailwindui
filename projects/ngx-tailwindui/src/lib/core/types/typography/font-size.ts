@@ -1,14 +1,4 @@
-export type FontSize =
-    | "text-xs"
-    | "text-sm"
-    | "text-base"
-    | "text-lg"
-    | "text-xl"
-    | "text-2xl"
-    | "text-3xl"
-    | "text-4xl"
-    | "text-5xl"
-    | "text-6xl"
-    | "text-7xl"
-    | "text-8xl"
-    | "text-9xl"
+import { DesignSystem } from "../../design-system/design-system";
+import { From } from "../generics";
+
+export type FontSize = From<typeof DesignSystem.typography['font-size']>

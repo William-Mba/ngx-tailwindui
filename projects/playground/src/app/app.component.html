@@ -5,7 +5,7 @@
     <div class="grid gap-y-6 p-9 rounded-3xl border-dashed border-gray-600 border *:p-3 *:grid *:gap-3">
       <div class="col-span-2">
         <nxt-button nxt-ripple className="rounded-full">Sign in</nxt-button>
-        <nxt-button nxt-ripple [enabled]="false">
+        <nxt-button nxt-ripple [enabled]="false" onfocus="">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
             <path fill-rule="evenodd"
               d="M3.5 2A1.5 1.5 0 0 0 2 3.5v9A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 12.5 4H9.621a1.5 1.5 0 0 1-1.06-.44L7.439 2.44A1.5 1.5 0 0 0 6.38 2H3.5ZM8 6a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0v-1.5h-1.5a.75.75 0 0 1 0-1.5h1.5v-1.5A.75.75 0 0 1 8 6Z"
@@ -15,8 +15,8 @@
         </nxt-button>
       </div>
       <div>
-        <nxt-button variant="outlined">Cancel</nxt-button>
-        <nxt-button variant="outlined">
+        <nxt-button nxt-ripple variant="outlined">Cancel</nxt-button>
+        <nxt-button nxt-ripple variant="outlined">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
             <path
               d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.75 2.75 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.75 2.75 0 0 0 .892-.596l4.261-4.262a1.75 1.75 0 0 0 0-2.474Z" />
@@ -27,7 +27,7 @@
         </nxt-button>
       </div>
       <div>
-        <nxt-button variant="text">Back</nxt-button>
+        <nxt-button nxt-ripple variant="text">Back</nxt-button>
         <nxt-button nxt-ripple variant="text">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
             <path
@@ -38,7 +38,7 @@
       </div>
     </div>
     <h1 class="text-3xl font-bold my-6">Buttons group</h1>
-    <div
+    <div 
       class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
       <nxt-button nxt-ripple
         className="rounded-full shadow-lg font-bold bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500 min-[320px]:w-[235px] min-[375px]:w-[290px] min-[425px]:w-[340px]">

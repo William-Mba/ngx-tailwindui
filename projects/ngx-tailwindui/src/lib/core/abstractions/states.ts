@@ -1,8 +1,8 @@
 export interface IEnabled {
-    enable(): void
+    enable(): void;
 }
 export interface IDisabled {
-    disable(): void
+    disable(): void;
 }
 export interface IHovered {
     hover(): void
@@ -14,7 +14,7 @@ export interface IActived {
     active(): void
 }
 export interface IPressed {
-    click(): void
+    press(): void
 }
 export interface IDragged {
     drag(): void

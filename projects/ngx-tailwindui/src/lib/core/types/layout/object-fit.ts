@@ -1,6 +1,4 @@
-export type ObjectFit =
-    | "object-contain"
-    | "object-cover"
-    | "object-fill"
-    | "object-none"
-    | "object-scale-down"
+import { DesignSystem } from "../../design-system/design-system";
+import { From } from "../generics";
+
+export type ObjectFit =  From<typeof DesignSystem.layout['object-fit']>

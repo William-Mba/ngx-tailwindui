@@ -1,7 +1,4 @@
-export type LetterSpacing =
-    | "tracking-tighter"
-    | "tracking-tight"
-    | "tracking-normal"
-    | "tracking-wide"
-    | "tracking-wider"
-    | "tracking-widest"
+import { DesignSystem } from "../../design-system/design-system";
+import { From } from "../generics";
+
+export type LetterSpacing = From<typeof DesignSystem.typography['letter-spacing']>

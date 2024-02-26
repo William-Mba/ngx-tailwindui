@@ -1,10 +1,4 @@
-export type FontWeight =
-    | "font-thin"
-    | "font-extralight"
-    | "font-light"
-    | "font-normal"
-    | "font-medium"
-    | "font-semibold"
-    | "font-bold"
-    | "font-extrabold"
-    | "font-black"
+import { DesignSystem } from "../../design-system/design-system";
+import { From } from "../generics";
+
+export type FontWeight = From<typeof DesignSystem.typography['font-weight']>

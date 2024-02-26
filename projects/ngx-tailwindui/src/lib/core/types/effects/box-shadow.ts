@@ -1,3 +1,4 @@
-import { Size } from "../common";
+import { DesignSystem } from "../../design-system/design-system";
+import { From } from "../generics";
 
-export type Shadow = `shadow-${Exclude<Size, 'full'>}`
+export type BoxShadow = From<typeof DesignSystem.effects['box-shadow']>

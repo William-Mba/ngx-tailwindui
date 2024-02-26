@@ -7,7 +7,7 @@ import { concatMap, of, timer } from 'rxjs';
   standalone: true
 })
 export class RippleDirective {
-  private ds = DesignSystem;
+  ds = DesignSystem;
 
   @Input() enabled: boolean = true
 

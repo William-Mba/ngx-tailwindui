@@ -1,3 +1,4 @@
-import { Size } from "../common";
+import { DesignSystem } from "../../design-system/design-system";
+import { From } from "../generics";
 
-export type BorderRadius = `rounded-${Size}`
+export type BorderRadius = From<typeof DesignSystem.borders['border-radius']>

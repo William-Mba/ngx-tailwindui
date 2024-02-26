@@ -1,22 +1,4 @@
-export type Display =
-    | "block"
-    | "inline-block"
-    | "inline"
-    | "flex"
-    | "inline-flex"
-    | "table"
-    | "inline-table"
-    | "table-caption"
-    | "table-cell"
-    | "table-column"
-    | "table-column-group"
-    | "table-footer-group"
-    | "table-header-group"
-    | "table-row-group"
-    | "table-row"
-    | "flow-root"
-    | "grid"
-    | "inline-grid"
-    | "contents"
-    | "list-item"
-    | "hidden"
+import { DesignSystem } from "../../design-system/design-system";
+import { From } from "../generics";
+
+export type Display = From<typeof DesignSystem.layout['display']>
