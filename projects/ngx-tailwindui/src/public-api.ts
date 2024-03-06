@@ -14,4 +14,4 @@ export * from './lib/animations/ripple/ripple.directive'
 export * from './lib/elements/button/button.component'
 
 // options
-export * from './lib/options/elements/button.options'
+export * from './lib/options/button.options'

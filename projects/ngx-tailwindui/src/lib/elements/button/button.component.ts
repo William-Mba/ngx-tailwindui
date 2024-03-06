@@ -1,8 +1,9 @@
-import { Component, Input, OnInit, mergeApplicationConfig } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { Shape, Size, Variant } from "../../core/types/common";
 import { Button } from "./button";
-import { ButtonOptions, IButtonOptions } from "../../options/elements/button.options";
+import { ButtonOptions, ButtonVariant } from "../../options/button.options";
+import { Size } from "../../options/shared/size.options";
+import { Shape } from "../../options/shared/shape.options";
 
 @Component({
   selector: "nxt-button",
@@ -15,8 +16,8 @@ export class ButtonComponent extends Button implements OnInit {
   @Input() override size: Size = 'sm';
   @Input() override rounded: Shape = 'md';
   @Input() override className: string = '';
-  @Input() override variant: Variant = "filled";
-  @Input() override options: IButtonOptions = ButtonOptions;
+  @Input() override variant: ButtonVariant = "filled";
+  @Input() override options: ButtonOptions = ButtonOptions;
 
   ngOnInit(): void {
     this.setup();

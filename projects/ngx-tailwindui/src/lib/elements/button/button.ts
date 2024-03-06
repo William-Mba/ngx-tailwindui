@@ -1,22 +1,21 @@
-import { Variant } from "../../core/types/common";
-import { Element } from "../../core/abstractions/element";
-import { ToClassName } from "../../core/helpers/string.helper";
-import { IButtonOptions } from "../../options/elements/button.options";
+import { Element } from "../element";
+import { ButtonOptions, ButtonVariant } from "../../options/button.options";
+import { ToClassName } from "../../shared/helpers/object.helper";
 
 export abstract class Button extends Element {
 
-    variant!: Variant;
+    variant!: ButtonVariant;
     textContent!: string;
-    protected options!: IButtonOptions;
+    protected options!: ButtonOptions;
 
     setup(): void {
         this.init();
 
-        // base
+        // base, equals text variant
         this.addClass(
             ToClassName(this.options.base),
-            this.options.rounded[this.rounded],
-            this.options.size[this.size].padding,
+            ToClassName([this.options.rounded[this.rounded]]),
+            ToClassName([this.options.size[this.size].padding]),
             this.options.size[this.size].textSize,
         )
 

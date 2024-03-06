@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonOptions, IButtonOptions } from 'ngx-tailwindui';
+import { ButtonOptions } from 'ngx-tailwindui';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { ButtonOptions, IButtonOptions } from 'ngx-tailwindui';
 })
 export class AppComponent {
 
-  customOptions: IButtonOptions = {
+  customOptions: ButtonOptions = {
     base: ButtonOptions.base,
     size: ButtonOptions.size,
     rounded: ButtonOptions.rounded,
@@ -24,7 +24,7 @@ export class AppComponent {
         }
       },
       outlined: {
-        border: "", theme: { dark: {}, light: {} }
+        border: 'border-8', theme: { dark: {}, light: {} }
       }
     }
   }

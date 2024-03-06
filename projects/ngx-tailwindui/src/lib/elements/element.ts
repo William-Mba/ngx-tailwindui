@@ -1,5 +1,6 @@
-import { IsAcceptableClass } from "../helpers/type.helper";
-import { Size, Shape } from "../types/common";
+import { Shape } from "../options/shared/shape.options";
+import { Size } from "../options/shared/size.options";
+import { IsAcceptableClass } from "../shared/helpers/type.helper";
 
 export interface IElement {
     addClass(...arg: string[]): void,
