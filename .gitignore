@@ -44,3 +44,6 @@ Thumbs.db
 
 # Tailwind ouput file
 **/projects/**/styles.css
+
+**/coreTypes
+**/design-system
