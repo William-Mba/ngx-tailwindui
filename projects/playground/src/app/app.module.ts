@@ -2,19 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NgxTailwindUiModule } from 'ngx-tailwindui';
+import { ButtonComponent, NgxTailwindUIModule, RippleEffect } from 'ngx-tailwindui';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = []
 @NgModule({
   declarations: [
-    AppComponent,
-    MenuComponent
+    AppComponent
   ],
   imports: [
+    MenuComponent,
     BrowserModule,
-    NgxTailwindUiModule,
+    NgxTailwindUIModule,
+    ButtonComponent,
     RouterModule.forRoot(routes)
   ],
   providers: [],

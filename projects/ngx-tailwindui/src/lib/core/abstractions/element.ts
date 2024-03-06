@@ -1,13 +1,5 @@
-import { TemplateRef } from "@angular/core";
-import { Width } from "../types/sizing/width";
-import { Height } from "../types/sizing/height";
-import { Margin } from "../types/spacing/margin";
-import { Padding } from "../types/spacing/padding";
-import { Size } from "../types/sizing/size";
-import { Color } from "../types/colors-palette";
-import { BgColor } from "../types/backgrounds/background-color";
-import { BorderRadius } from "../types/borders/border-radius";
-import { DesignSystem } from "../design-system/design-system";
+import { IsAcceptableClass } from "../helpers/type.helper";
+import { Size, Shape } from "../types/common";
 
 export interface IElement {
     addClass(...arg: string[]): void,
@@ -15,25 +7,20 @@ export interface IElement {
     hasClass(className: string): boolean,
 }
 
-export abstract class Element<T> implements IElement {
-    size!: Size;
-    color!: Color;
-    width!: Width;
-    height!: Height;
-    margin!: Margin;
-    border!: string;
-    bgColor!: BgColor;
-    padding!: Padding;
-    className!: string
-    override!: boolean;
-    shape!: BorderRadius;
-    textContent!: string;
-    classNames: string[] = [];
-    enabled: boolean = true;
-    templateRef!: TemplateRef<T>;
-    ds = DesignSystem;
+export abstract class Element implements IElement {
 
-    protected constructor(){}
+    size!: Size;
+    rounded!: Shape;
+    style: string[] = [];
+    className: string = '';
+
+    protected init() {
+        this.addClass(
+            this.size ? this.size : '',
+            this.rounded ? this.rounded : '',
+            this.className ? this.className : ''
+        )
+    }
 
     hasClass(className: string): boolean {
         return (this.className.search(className) === 0);
@@ -41,15 +28,17 @@ export abstract class Element<T> implements IElement {
 
     addClass(...arg: string[]): void {
         arg.forEach(c => {
+            if (!IsAcceptableClass(c)) return
+
             if (!this.hasClass(`/${c}/`)) {
-                this.classNames.push(c)
+                this.style.push(c)
             }
         })
     }
 
     removeClass(...arg: string[]): void {
         arg.forEach(classToRemove => {
-            this.classNames = this.classNames
+            this.style = this.style
                 .filter((c) => c !== classToRemove)
         })
     }

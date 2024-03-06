@@ -1,57 +1,53 @@
-# Contributing to @ngx-tailwindui
+# Contributing
 
-We would love for you to contribute to `@ngx-tailwindui` and help make it even better than it is today!
-As a contributor, here are the guidelines we would like you to follow:
+Thank you for your interest in contributing! The following sections describe
+ways to get involved.
 
- - [Code of Conduct](#coc)
- - [Issues and Bugs](#issue)
- - [Feature Requests](#feature)
- - [Submission Guidelines](#submit)
- - [Coding Rules](#rules)
- - [Commit Message Guidelines](#commit)
+## Code of conduct
 
+Please review and follow our [code of conduct](CODE_OF_CONDUCT.md).
 
-## <a name="coc"></a> Code of Conduct
+## Feedback
 
-Help us keep NgxTailwind UI open and inclusive.
-Please read and follow our [Code of Conduct][coc].
+User feedback is the most valuable to us. It's a great way to start
+contributing!
 
-## <a name="issue"></a> Found a Bug?
+-   [File new issues](https://github.com/William-Mba/ngx-tailwindui/issues/new/choose)
+    for bugs you run into or feature requests you have.
 
-If you find a bug in the source code, you can help us by [submitting an issue](#submit-issue) to our [GitHub Repository][github].
-Even better, you can [submit a Pull Request](#submit-pr) with a fix.
+-   [Create a discussion](https://github.com/William-Mba/ngx-tailwindui/discussions/new/choose)
+    for help, feedback on changes, or feature proposals.
 
+## Discord
 
-## <a name="feature"></a> Missing a Feature?
-You can *request* a new feature by [submitting an issue](#submit-issue) to our GitHub Repository.
-If you would like to *implement* a new feature, please consider the size of the change in order to determine the right steps to proceed:
+Join our [Discord](https://discord.gg/NQuRP9rE) channel to chat
+directly with the team and other users.
 
-* For a **Major Feature**, first open an issue and outline your proposal so that it can be discussed.
-  This process allows us to better coordinate our efforts, prevent duplication of work, and help you to craft the change so that it is successfully accepted into the project.
+## Pull requests
 
-  **Note**: Adding a new topic to the documentation, or significantly re-writing a topic, counts as a major feature.
+Pull requests are welcome! Keep a few things in mind:
 
-* **Small Features** can be crafted and directly [submitted as a Pull Request](#submit-pr).
+-   Create an
+    [issue](https://github.com/William-Mba/ngx-tailwindui/issues/new/choose)
+    or
+    [discussion](https://github.com/William-Mba/ngx-tailwindui/discussions/new/choose)
+    before opening a pull request.
+-   Trivial changes, such as documentation, don't need an issue.
+-   Create draft PRs for new features.
+-   Please be patient! It may take a while for the team to review. Keep changes
+    small and scoped to speed things up.
 
+### New components
 
-## <a name="submit"></a> Submission Guidelines
+Please understand that new component implementations are difficult for us to
+directly accept. They need to complete several engineer, design, and
+accessibility reviews that are not easy with our externally available workflows.
 
+If you want to help build a new component, create a
+[new discussion](https://discord.gg/MjRgxFGr).
+Add any design docs, code samples, reference implementations in draft PRs, and
+get community feedback.
 
-### <a name="submit-issue"></a> Submitting an Issue
-
-Before you submit an issue, please search the issue tracker. An issue for your problem might already exist and the discussion might inform you of workarounds readily available.
-
-We want to fix all the issues as soon as possible, but before fixing a bug, we need to reproduce and confirm it.
-In order to reproduce bugs, we require that you provide a minimal reproduction.
-Having a minimal reproducible scenario gives us a wealth of important information without going back and forth to you with additional questions.
-
-A minimal reproduction allows us to quickly confirm a bug (or point out a coding problem) as well as confirm that we are fixing the right problem.
-
-We require a minimal reproduction to save maintainers' time and ultimately be able to fix more bugs.
-Often, developers find coding problems themselves while preparing a minimal reproduction.
-We understand that sometimes it might be hard to extract essential bits of code from a larger codebase, but we really need to isolate the problem before we can fix it.
-
-Unfortunately, we are not able to investigate / fix bugs without a minimal reproduction, so if we don't hear back from you, we are going to close an issue that doesn't have enough info to be reproduced.
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 
@@ -62,10 +58,6 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
    Discussing the design upfront helps to ensure that we're ready to accept your work.
-
-3. Please sign our [Contributor License Agreement (CLA)](#cla) before sending PRs.
-   We cannot accept code without a signed CLA.
-   Make sure you author all contributed Git commits with email address associated with your CLA signature.
 
 4. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the William-Mba/ngx-tailwindui repo.
 
@@ -214,8 +206,8 @@ The `footer` is optional. The [Commit Message Footer](#commit-footer) format des
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
   │       └─⫸ Commit Scope: animations|common|core|localize|http|
-  │                          elements|forms|language-service|migrations|
-  │                          upgrade|zone.js|packaging|changelog|docs-infra|
+  │                          elements|forms|migrations|components|
+  │                          upgrade|packaging|changelog|docs-infra|
   │
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
 ```
@@ -248,7 +240,7 @@ The following is the list of supported scopes:
 * `elements`
 * `forms`
 * `http`
-* `language-service`
+* `components`
 * `localize`
 * `router`
 * `upgrade`

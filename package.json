@@ -37,9 +37,9 @@
     "typescript": "~5.1.3"
   },
   "author": {
-    "email": "w.mba@outlook.com",
+    "email": "wmba@ecologiciel.com",
     "name": "William Mba",
     "url": "https://github.com/William-Mba"
   },
-  "license": "MIT"
+  "license": "Apache-2.0"
 }

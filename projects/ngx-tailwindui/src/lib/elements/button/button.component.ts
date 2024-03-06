@@ -1,10 +1,8 @@
-import { Component, HostListener, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, mergeApplicationConfig } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { Variant } from "../../core/types/common";
+import { Shape, Size, Variant } from "../../core/types/common";
 import { Button } from "./button";
-import { Padding } from "../../core/types/spacing/padding";
-import { Width } from "../../core/types/sizing/width";
-import { Margin } from "../../core/types/spacing/margin";
+import { ButtonOptions, IButtonOptions } from "../../options/elements/button.options";
 
 @Component({
   selector: "nxt-button",
@@ -14,31 +12,13 @@ import { Margin } from "../../core/types/spacing/margin";
 })
 export class ButtonComponent extends Button implements OnInit {
 
-  @Input() override enabled: boolean = true;
-  @Input() override override: boolean = false;
-  @Input() override variant: Variant = "filled";
+  @Input() override size: Size = 'sm';
+  @Input() override rounded: Shape = 'md';
   @Input() override className: string = '';
-  @Input() override padding!: Padding;
-  @Input() override margin!: Margin;
-  @Input() override width!: Width;
-
-  constructor() {
-    super()
-  }
+  @Input() override variant: Variant = "filled";
+  @Input() override options: IButtonOptions = ButtonOptions;
 
   ngOnInit(): void {
-    this.initialize()
-  }
-
-  @HostListener('mouseenter') onmouseenter(): void {
-    this.state.hover();
-  }
-
-  @HostListener('mousedown') onmousedown(): void {
-    this.state.press();
-  }
-
-  @HostListener('mouseup') onmouseup(): void {
-    this.state.focus();
+    this.setup();
   }
 }

@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
-import { ElementsModule } from './elements/elements.module';
-import { ComponentsModule } from './components/components.module';
-import { CoreModule } from './core/core.module';
+import { RippleEffect } from './animations/ripple/ripple.directive';
+import { ButtonComponent } from './elements/button/button.component';
 
-const modules = [
-  CoreModule,
-  ElementsModule,
-  ComponentsModule
+const directives = [
+  RippleEffect
+]
+const elements = [
+  ButtonComponent
 ]
 
 @NgModule({
   declarations: [],
   imports: [
-    ...modules
+    elements,
+    directives
   ],
   exports: [
-    ...modules
+    elements,
+    directives
   ]
 })
-export class NgxTailwindUiModule { }
+export class NgxTailwindUIModule { }
