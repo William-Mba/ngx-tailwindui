@@ -1,65 +1,318 @@
 <app-menu></app-menu>
 <router-outlet>
-  <div class="grid w-full md:mt-38 justify-center p-6">
-    <h1 class="text-3xl font-bold my-6">Buttons</h1>
-    <div class="grid gap-y-6 p-9 rounded-3xl border-dashed border-gray-600 border *:p-3 *:grid *:gap-3">
-      <div class="col-span-2">
-        <nxt-button nxt-ripple [enabled]="true" className="rounded-full">Sign in</nxt-button>
-        <nxt-button nxt-ripple [enabled]="false">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
+  <div class="grid mt-40">
+    <div class="sm:w-[1024px] mx-auto grid p-16 gap-6">
+      <h1 class="text-3xl font-bold">Buttons & Icons</h1>
+      <h3 class="font-medium text-lg mt-8">Filled variant</h3>
+      <div
+        class="grid gap-8 p-16 sm:grid-cols-3 sm:items-end border *:w-auto *:justify-center *:flex *:flex-wrap border-black/[.10] dark:border-white/[.10] rounded-2xl">
+        <nxt-button rounded="none">Contact us</nxt-button>
+        <nxt-button rounded="none" size="md">Contact us</nxt-button>
+        <nxt-button rounded="none" size="lg">Contact us</nxt-button>
+        <nxt-button className="hover:shadow-md hover:shadow-black/20">
+          Get started
+        </nxt-button>
+        <nxt-button size="md" className="hover:shadow-lg hover:shadow-black/20">
+          Get started
+        </nxt-button>
+        <nxt-button size="lg" className="hover:shadow-lg hover:shadow-black/20">
+          Get started
+        </nxt-button>
+        <nxt-button [options]="customOptions" nxt-ripple rounded="full" className="shadow-md shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5V5h14v-.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
             <path fill-rule="evenodd"
-              d="M3.5 2A1.5 1.5 0 0 0 2 3.5v9A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 12.5 4H9.621a1.5 1.5 0 0 1-1.06-.44L7.439 2.44A1.5 1.5 0 0 0 6.38 2H3.5ZM8 6a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0v-1.5h-1.5a.75.75 0 0 1 0-1.5h1.5v-1.5A.75.75 0 0 1 8 6Z"
+              d="M15 7H1v4.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V7ZM3 10.25a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1-.75-.75Zm3.75-.75a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5h-2.5Z"
               clip-rule="evenodd" />
           </svg>
-          Create new project
+          Make payment
         </nxt-button>
-      </div>
-      <div>
-        <nxt-button variant="outlined">Cancel</nxt-button>
-        <nxt-button variant="outlined">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
-            <path
-              d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.75 2.75 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.75 2.75 0 0 0 .892-.596l4.261-4.262a1.75 1.75 0 0 0 0-2.474Z" />
-            <path
-              d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5H4.75Z" />
+        <nxt-button nxt-ripple rounded="full" size="md" className="shadow-lg shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M2.5 4A1.5 1.5 0 0 0 1 5.5V6h18v-.5A1.5 1.5 0 0 0 17.5 4h-15ZM19 8.5H1v6A1.5 1.5 0 0 0 2.5 16h15a1.5 1.5 0 0 0 1.5-1.5v-6ZM3 13.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75Zm4.75-.75a.75.75 0 0 0 0 1.5h3.5a.75.75 0 0 0 0-1.5h-3.5Z"
+              clip-rule="evenodd" />
           </svg>
-          Edit application
+          Make payment
+        </nxt-button>
+        <nxt-button nxt-ripple rounded="full" size="lg" className="shadow-xl shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path d="M4.5 3.75a3 3 0 0 0-3 3v.75h21v-.75a3 3 0 0 0-3-3h-15Z" />
+            <path fill-rule="evenodd"
+              d="M22.5 9.75h-21v7.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3v-7.5Zm-18 3.75a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z"
+              clip-rule="evenodd" />
+          </svg>
+          Make payment
+        </nxt-button>
+        <nxt-button rounded="none" className="py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path
+              d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button rounded="none" size="md" className="py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path
+              d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button rounded="none" size="lg" className="py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+        <nxt-button nxt-ripple className="hover:shadow-md hover:shadow-black/10 py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path
+              d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button nxt-ripple size="md" className="hover:shadow-lg hover:shadow-black/10 py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path
+              d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button nxt-ripple size="lg" className="hover:shadow-xl hover:shadow-black/10 py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+        <nxt-button nxt-ripple rounded="full" className="shadow-md shadow-black/20 py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path
+              d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button nxt-ripple rounded="full" size="md" className="shadow-lg shadow-black/20 py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path
+              d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button nxt-ripple rounded="full" size="lg" className="shadow-xl shadow-black/20 py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+              clip-rule="evenodd" />
+          </svg>
         </nxt-button>
       </div>
-      <div>
-        <nxt-button variant="text">Back</nxt-button>
-        <nxt-button nxt-ripple variant="text">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-6">
+      <h3 class="font-medium text-lg mt-8">Outlined variant</h3>
+      <div
+        class="grid gap-8 p-16 sm:grid-cols-3 sm:items-end border *:w-auto *:justify-center *:flex *:flex-wrap border-black/[.10] dark:border-white/[.10] rounded-2xl">
+        <nxt-button variant="outlined" rounded="none">Add to cart</nxt-button>
+        <nxt-button variant="outlined" rounded="none" size="md">Add to cart</nxt-button>
+        <nxt-button variant="outlined" rounded="none" size="lg">Add to cart</nxt-button>
+        <nxt-button variant="outlined" className="hover:shadow-md hover:shadow-black/20">
+          Add to favorite
+        </nxt-button>
+        <nxt-button variant="outlined" size="md" className="hover:shadow-lg hover:shadow-black/20">
+          Add to favorite
+        </nxt-button>
+        <nxt-button variant="outlined" size="lg" className="hover:shadow-lg hover:shadow-black/20">
+          Add to favorite
+        </nxt-button>
+        <nxt-button variant="outlined" nxt-ripple rounded="full" className="shadow-md shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd"
+              d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+              clip-rule="evenodd" />
+          </svg>
+          Add to favorites
+        </nxt-button>
+        <nxt-button variant="outlined" nxt-ripple rounded="full" size="md" className="shadow-lg shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+              clip-rule="evenodd" />
+          </svg>
+          Add to favorites
+        </nxt-button>
+        <nxt-button variant="outlined" nxt-ripple rounded="full" size="lg" className="shadow-xl shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+              clip-rule="evenodd" />
+          </svg>
+          Add to favorites
+        </nxt-button>
+        <nxt-button variant="outlined" rounded="none" className="py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd"
+              d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="outlined" rounded="none" size="md" className="py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M6 5v1H4.667a1.75 1.75 0 0 0-1.743 1.598l-.826 9.5A1.75 1.75 0 0 0 3.84 19H16.16a1.75 1.75 0 0 0 1.743-1.902l-.826-9.5A1.75 1.75 0 0 0 15.333 6H14V5a4 4 0 0 0-8 0Zm4-2.5A2.5 2.5 0 0 0 7.5 5v1h5V5A2.5 2.5 0 0 0 10 2.5ZM7.5 10a2.5 2.5 0 0 0 5 0V8.75a.75.75 0 0 1 1.5 0V10a4 4 0 0 1-8 0V8.75a.75.75 0 0 1 1.5 0V10Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="outlined" rounded="none" size="lg" className="py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="outlined" className="hover:shadow-md hover:shadow-black/10 py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path
+              d="M2 3.5A1.5 1.5 0 0 1 3.5 2h2A1.5 1.5 0 0 1 7 3.5v2A1.5 1.5 0 0 1 5.5 7h-2A1.5 1.5 0 0 1 2 5.5v-2ZM2 10.5A1.5 1.5 0 0 1 3.5 9h2A1.5 1.5 0 0 1 7 10.5v2A1.5 1.5 0 0 1 5.5 14h-2A1.5 1.5 0 0 1 2 12.5v-2ZM10.5 2A1.5 1.5 0 0 0 9 3.5v2A1.5 1.5 0 0 0 10.5 7h2A1.5 1.5 0 0 0 14 5.5v-2A1.5 1.5 0 0 0 12.5 2h-2ZM11.5 9a.75.75 0 0 1 .75.75v1h1a.75.75 0 0 1 0 1.5h-1v1a.75.75 0 0 1-1.5 0v-1h-1a.75.75 0 0 1 0-1.5h1v-1A.75.75 0 0 1 11.5 9Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="outlined" size="md" className="hover:shadow-lg hover:shadow-black/10 py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path
+              d="M2 4.25A2.25 2.25 0 0 1 4.25 2h2.5A2.25 2.25 0 0 1 9 4.25v2.5A2.25 2.25 0 0 1 6.75 9h-2.5A2.25 2.25 0 0 1 2 6.75v-2.5ZM2 13.25A2.25 2.25 0 0 1 4.25 11h2.5A2.25 2.25 0 0 1 9 13.25v2.5A2.25 2.25 0 0 1 6.75 18h-2.5A2.25 2.25 0 0 1 2 15.75v-2.5ZM11 4.25A2.25 2.25 0 0 1 13.25 2h2.5A2.25 2.25 0 0 1 18 4.25v2.5A2.25 2.25 0 0 1 15.75 9h-2.5A2.25 2.25 0 0 1 11 6.75v-2.5ZM15.25 11.75a.75.75 0 0 0-1.5 0v2h-2a.75.75 0 0 0 0 1.5h2v2a.75.75 0 0 0 1.5 0v-2h2a.75.75 0 0 0 0-1.5h-2v-2Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="outlined" size="lg" className="hover:shadow-xl hover:shadow-black/10 py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path
+              d="M6 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6ZM15.75 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3H18a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3h-2.25ZM6 12.75a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3v-2.25a3 3 0 0 0-3-3H6ZM17.625 13.5a.75.75 0 0 0-1.5 0v2.625H13.5a.75.75 0 0 0 0 1.5h2.625v2.625a.75.75 0 0 0 1.5 0v-2.625h2.625a.75.75 0 0 0 0-1.5h-2.625V13.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="outlined" nxt-ripple rounded="full" className="shadow-md shadow-black/20 py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
             <path
               d="M12 6a2 2 0 1 0-1.994-1.842L5.323 6.5a2 2 0 1 0 0 3l4.683 2.342a2 2 0 1 0 .67-1.342L5.995 8.158a2.03 2.03 0 0 0 0-.316L10.677 5.5c.353.311.816.5 1.323.5Z" />
           </svg>
-          Share
+        </nxt-button>
+        <nxt-button opti variant="outlined" nxt-ripple rounded="full" size="md" className="shadow-lg shadow-black/20 py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path
+              d="M13 4.5a2.5 2.5 0 1 1 .702 1.737L6.97 9.604a2.518 2.518 0 0 1 0 .792l6.733 3.367a2.5 2.5 0 1 1-.671 1.341l-6.733-3.367a2.5 2.5 0 1 1 0-3.475l6.733-3.366A2.52 2.52 0 0 1 13 4.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="outlined" nxt-ripple rounded="full" size="lg" className="shadow-xl shadow-black/20 py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M15.75 4.5a3 3 0 1 1 .825 2.066l-8.421 4.679a3.002 3.002 0 0 1 0 1.51l8.421 4.679a3 3 0 1 1-.729 1.31l-8.421-4.678a3 3 0 1 1 0-4.132l8.421-4.679a3 3 0 0 1-.096-.755Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+      </div>
+      <h3 class="font-medium text-lg mt-8">Text variant</h3>
+      <div
+        class="grid gap-8 p-16 sm:grid-cols-3 sm:items-end border *:w-auto *:justify-center *:flex *:flex-wrap border-black/[.10] dark:border-white/[.10] rounded-2xl">
+        <nxt-button variant="text" rounded="none">Add to cart</nxt-button>
+        <nxt-button variant="text" rounded="none" size="md">Add to cart</nxt-button>
+        <nxt-button variant="text" rounded="none" size="lg">Add to cart</nxt-button>
+        <nxt-button variant="text" className="hover:shadow-md hover:shadow-black/20">
+          Add to favorite
+        </nxt-button>
+        <nxt-button variant="text" size="md" className="hover:shadow-lg hover:shadow-black/20">
+          Add to favorite
+        </nxt-button>
+        <nxt-button variant="text" size="lg" className="hover:shadow-lg hover:shadow-black/20">
+          Add to favorite
+        </nxt-button>
+        <nxt-button variant="text" nxt-ripple rounded="full" className="shadow-md shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd"
+              d="M8 1.75a.75.75 0 0 1 .692.462l1.41 3.393 3.664.293a.75.75 0 0 1 .428 1.317l-2.791 2.39.853 3.575a.75.75 0 0 1-1.12.814L7.998 12.08l-3.135 1.915a.75.75 0 0 1-1.12-.814l.852-3.574-2.79-2.39a.75.75 0 0 1 .427-1.318l3.663-.293 1.41-3.393A.75.75 0 0 1 8 1.75Z"
+              clip-rule="evenodd" />
+          </svg>
+          Add to favorites
+        </nxt-button>
+        <nxt-button variant="text" nxt-ripple rounded="full" size="md" className="shadow-lg shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+              clip-rule="evenodd" />
+          </svg>
+          Add to favorites
+        </nxt-button>
+        <nxt-button variant="text" nxt-ripple rounded="full" size="lg" className="shadow-xl shadow-black/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+              clip-rule="evenodd" />
+          </svg>
+          Add to favorites
+        </nxt-button>
+        <nxt-button variant="text" rounded="none" className="py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd"
+              d="M5 4a3 3 0 0 1 6 0v1h.643a1.5 1.5 0 0 1 1.492 1.35l.7 7A1.5 1.5 0 0 1 12.342 15H3.657a1.5 1.5 0 0 1-1.492-1.65l.7-7A1.5 1.5 0 0 1 4.357 5H5V4Zm4.5 0v1h-3V4a1.5 1.5 0 0 1 3 0Zm-3 3.75a.75.75 0 0 0-1.5 0v1a3 3 0 1 0 6 0v-1a.75.75 0 0 0-1.5 0v1a1.5 1.5 0 1 1-3 0v-1Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="text" rounded="none" size="md" className="py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M6 5v1H4.667a1.75 1.75 0 0 0-1.743 1.598l-.826 9.5A1.75 1.75 0 0 0 3.84 19H16.16a1.75 1.75 0 0 0 1.743-1.902l-.826-9.5A1.75 1.75 0 0 0 15.333 6H14V5a4 4 0 0 0-8 0Zm4-2.5A2.5 2.5 0 0 0 7.5 5v1h5V5A2.5 2.5 0 0 0 10 2.5ZM7.5 10a2.5 2.5 0 0 0 5 0V8.75a.75.75 0 0 1 1.5 0V10a4 4 0 0 1-8 0V8.75a.75.75 0 0 1 1.5 0V10Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="text" rounded="none" size="lg" className="py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z"
+              clip-rule="evenodd" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="text" className="hover:shadow-md hover:shadow-black/10 py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path
+              d="M2 3.5A1.5 1.5 0 0 1 3.5 2h2A1.5 1.5 0 0 1 7 3.5v2A1.5 1.5 0 0 1 5.5 7h-2A1.5 1.5 0 0 1 2 5.5v-2ZM2 10.5A1.5 1.5 0 0 1 3.5 9h2A1.5 1.5 0 0 1 7 10.5v2A1.5 1.5 0 0 1 5.5 14h-2A1.5 1.5 0 0 1 2 12.5v-2ZM10.5 2A1.5 1.5 0 0 0 9 3.5v2A1.5 1.5 0 0 0 10.5 7h2A1.5 1.5 0 0 0 14 5.5v-2A1.5 1.5 0 0 0 12.5 2h-2ZM11.5 9a.75.75 0 0 1 .75.75v1h1a.75.75 0 0 1 0 1.5h-1v1a.75.75 0 0 1-1.5 0v-1h-1a.75.75 0 0 1 0-1.5h1v-1A.75.75 0 0 1 11.5 9Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="text" size="md" className="hover:shadow-lg hover:shadow-black/10 py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path
+              d="M2 4.25A2.25 2.25 0 0 1 4.25 2h2.5A2.25 2.25 0 0 1 9 4.25v2.5A2.25 2.25 0 0 1 6.75 9h-2.5A2.25 2.25 0 0 1 2 6.75v-2.5ZM2 13.25A2.25 2.25 0 0 1 4.25 11h2.5A2.25 2.25 0 0 1 9 13.25v2.5A2.25 2.25 0 0 1 6.75 18h-2.5A2.25 2.25 0 0 1 2 15.75v-2.5ZM11 4.25A2.25 2.25 0 0 1 13.25 2h2.5A2.25 2.25 0 0 1 18 4.25v2.5A2.25 2.25 0 0 1 15.75 9h-2.5A2.25 2.25 0 0 1 11 6.75v-2.5ZM15.25 11.75a.75.75 0 0 0-1.5 0v2h-2a.75.75 0 0 0 0 1.5h2v2a.75.75 0 0 0 1.5 0v-2h2a.75.75 0 0 0 0-1.5h-2v-2Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="text" size="lg" className="hover:shadow-xl hover:shadow-black/10 py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path
+              d="M6 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6ZM15.75 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3H18a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3h-2.25ZM6 12.75a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3v-2.25a3 3 0 0 0-3-3H6ZM17.625 13.5a.75.75 0 0 0-1.5 0v2.625H13.5a.75.75 0 0 0 0 1.5h2.625v2.625a.75.75 0 0 0 1.5 0v-2.625h2.625a.75.75 0 0 0 0-1.5h-2.625V13.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="text" nxt-ripple rounded="full" className="shadow-md shadow-black/20 py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path
+              d="M12 6a2 2 0 1 0-1.994-1.842L5.323 6.5a2 2 0 1 0 0 3l4.683 2.342a2 2 0 1 0 .67-1.342L5.995 8.158a2.03 2.03 0 0 0 0-.316L10.677 5.5c.353.311.816.5 1.323.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="text" nxt-ripple rounded="full" size="md" className="shadow-lg shadow-black/20 py-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path
+              d="M13 4.5a2.5 2.5 0 1 1 .702 1.737L6.97 9.604a2.518 2.518 0 0 1 0 .792l6.733 3.367a2.5 2.5 0 1 1-.671 1.341l-6.733-3.367a2.5 2.5 0 1 1 0-3.475l6.733-3.366A2.52 2.52 0 0 1 13 4.5Z" />
+          </svg>
+        </nxt-button>
+        <nxt-button variant="text" nxt-ripple rounded="full" size="lg" className="shadow-xl shadow-black/20 py-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M15.75 4.5a3 3 0 1 1 .825 2.066l-8.421 4.679a3.002 3.002 0 0 1 0 1.51l8.421 4.679a3 3 0 1 1-.729 1.31l-8.421-4.678a3 3 0 1 1 0-4.132l8.421-4.679a3 3 0 0 1-.096-.755Z"
+              clip-rule="evenodd" />
+          </svg>
         </nxt-button>
       </div>
     </div>
-    <h1 class="text-3xl font-bold my-6">Buttons group</h1>
-    <div
-      class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
-      <nxt-button nxt-ripple
-        className="rounded-full shadow-lg font-bold bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500 min-[320px]:w-[235px] min-[375px]:w-[290px] min-[425px]:w-[340px]">
+    <!-- <h1 class="text-3xl font-bold my-6">Customized Buttons</h1>
+    <div class="
+      flex flex-col
+      gap-y-6
+      p-10
+      rounded-3xl
+      border-indigo-200
+      dark:border-indigo-900 dark:border-opacity-25
+      border
+    ">
+      <button nxt-ripple
+        class="inline-flex justify-center rounded-full shadow-lg font-bold bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500">
         Filled variant
-      </nxt-button>
-    </div>
-    <h1 class="text-3xl font-bold my-6">Buttons customized</h1>
-    <div
-      class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
-      <nxt-button
-        className="inline-flex rounded-full shadow-lg font-bold bg-gradient-to-r from-green-600 to-indigo-800 hover:from-pink-500 hover:to-yellow-500">
-        Filled variant
-      </nxt-button>
-    </div>
-    <h1 class="text-3xl font-bold my-6">Icons</h1>
-    <div
-      class="flex flex-col gap-y-6 p-10 rounded-3xl border-indigo-200 dark:border-indigo-900 dark:border-opacity-25 border">
-      <nxt-icon>
-        <img src="assets/images/logos/logo-dark.svg" class="h-[24px]" alt="" srcset="">
-      </nxt-icon>
-      <nxt-icon variant="contained">My icon</nxt-icon>
-    </div>
+      </button>
+    </div> -->
   </div>
 </router-outlet>

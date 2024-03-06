@@ -1,1 +1,0 @@
-export type AspectRatio = "aspect-auto" | "aspect-square" | "aspect-video"

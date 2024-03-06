@@ -1,65 +1,31 @@
 import { Variant } from "../../core/types/common";
-import { TemplateRef } from "@angular/core";
-import { IButtonState } from "./button.states";
-import { IElement } from "../../core/abstractions/element";
-import { DesignSystem } from "../../core/design-system/design-system";
+import { Element } from "../../core/abstractions/element";
+import { ToClassName } from "../../core/helpers/string.helper";
+import { IButtonOptions } from "../../options/elements/button.options";
 
-export interface IButton extends IElement<IButton> {
-    variant: Variant,
-    textContent: string,
-}
+export abstract class Button extends Element {
 
-export abstract class Button implements IButton {
-    state!: IButtonState;
     variant!: Variant;
-    className!: string;
-    padding!: string;
-    override!: boolean;
     textContent!: string;
-    enabled!: boolean;
-    margin!: string;
-    width!: string;
-    height!: string;
-    classNames: string[] = [];
-    templateRef!: TemplateRef<IButton>;
-    ds = DesignSystem
+    protected options!: IButtonOptions;
 
-    hasClass(className: string): boolean {
-        return (this.className.search(className) === 0);
-    }
+    setup(): void {
+        this.init();
 
-    addClass(...arg: string[]): void {
-        arg.forEach(c => {
-            if (!this.hasClass(`/${c}/`)) {
-                this.classNames.push(c)
-            }
-        })
-    }
+        // base
+        this.addClass(
+            ToClassName(this.options.base),
+            this.options.rounded[this.rounded],
+            this.options.size[this.size].padding,
+            this.options.size[this.size].textSize,
+        )
 
-    removeClass(...arg: string[]): void {
-        arg.forEach(classToRemove => {
-            this.classNames = this.classNames
-                .filter((c) => c !== classToRemove)
-        })
-    }
-
-    setState(newState: IButtonState) {
-        this.state = newState
-    }
-
-    enable(): void {
-        this.state.enable()
-    }
-
-    hover(): void {
-        this.state.hover()
-    }
-
-    click(): void {
-        this.state.click()
-    }
-
-    focus(): void {
-        this.state.focus()
+        // variants
+        if (this.variant === 'filled') {
+            this.addClass(ToClassName(this.options.variant.filled))
+        }
+        if (this.variant === 'outlined') {
+            this.addClass(ToClassName(this.options.variant.outlined))
+        }
     }
 }
