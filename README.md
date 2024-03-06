@@ -1,4 +1,4 @@
-# ngx-tailwindui
+# Ngx-Tailwind UI
 
 The open-source components library for Angular, crafted with Tailwind CSS and Material Design.
 
