@@ -9,6 +9,8 @@ The best way to quickly integrate <a href="https://tailwindcss.com/docs/installa
 <br/>
 <br/>
 
+Take advantages of ready-to-use components with standard configurations or create unique web UIs through configurations options that give you the power to customize everything consistently.
+
 ## Get stared
 
 1. **Prerequisites:**
