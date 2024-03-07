@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AppButtonOptions } from '@options/app.button.options';
-import { ButtonOptions, OptionsManager } from 'ngx-tailwindui';
+import { Component } from '@angular/core';
+import { MyButtonOptions } from '@options/mybutton.options';
+import { OptionsManager } from 'ngx-tailwindui';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,8 @@ import { ButtonOptions, OptionsManager } from 'ngx-tailwindui';
   styles: []
 })
 export class AppComponent {
-  protected optionsManager = new OptionsManager();
 
   constructor() {
-    this.optionsManager.configure(AppButtonOptions);
+    OptionsManager.setButton(MyButtonOptions);
   }
 }

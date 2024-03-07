@@ -1,17 +1,12 @@
+import { OptionsManager } from "../options/options-manager";
 import { Size } from "../options/shared/size.options";
 import { IsAcceptableClass } from "../shared/helpers/type.helper";
 
-export interface IElement {
-    addClass(...arg: string[]): void,
-    removeClass(...arg: string[]): void
-    hasClass(className: string): boolean,
-}
+export abstract class Element {
 
-export abstract class Element implements IElement {
-
-    size!: Size;
-    style: string[] = [];
-    className: string = '';
+    protected size!: Size;
+    protected style: string[] = [];
+    protected className: string = '';
 
     protected init() {
         this.addClass(this.className)

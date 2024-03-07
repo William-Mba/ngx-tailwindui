@@ -12,12 +12,6 @@ export const ToClassName = (obj: Record<string, any>): string => {
     }).join(' ');
 }
 
-/**Simple merge two objects
- */
-export const mergeSimple = <T>(target: T, source: T): T => {
-    return { ...target, ...source };
-}
-
 /**
  * Simple object check.
  * @param item
@@ -28,11 +22,11 @@ export const isObject = (item: any): boolean => {
 }
 
 /**
- * Deep merge two objects.
+ * Merge configurations options of type T
  * @param target
  * @param ...sources
  */
-export const mergeDeep = (target: any, ...sources: any[]): any => {
+export const mergeDeep = <T extends Record<string, any>>(target: T, ...sources: T[]): T => {
     if (!sources.length) return target;
     const source = sources.shift();
 

@@ -1,24 +1,26 @@
 import { Directive, HostListener, Input } from '@angular/core';
 import { concatMap, of, timer } from 'rxjs';
-import { RippleOptions } from '../../options/ripple.options';
 import { ToClassName } from '../../shared/helpers/object.helper';
+import { OptionsManager } from '../../options/options-manager';
 
 @Directive({
   selector: '[nxt-ripple]',
   standalone: true
 })
 export class RippleEffect {
-  private options: RippleOptions = RippleOptions;
+
   @Input() disabled: boolean = false;
 
   @HostListener('click', ['$event']) onClick(event: PointerEvent) {
 
     if (this.disabled) return;
 
+    const options = OptionsManager.ripple;
+
     const target = event.target as HTMLElement;
 
-    target.classList.toggle(this.options.host.overflow, true)
-    target.classList.toggle(this.options.host.position, true)
+    target.classList.toggle(options.host.overflow, true)
+    target.classList.toggle(options.host.position, true)
 
     const span = document.createElement('span');
 
@@ -30,7 +32,7 @@ export class RippleEffect {
     span.style.top = `${event.pageY - (target.offsetTop + radius)}px`;
     span.style.left = `${event.pageX - (target.offsetLeft + radius)}px`;
 
-    span.className = ToClassName(this.options.element);
+    span.className = ToClassName(options.element);
 
     target.appendChild(span);
 

@@ -1,5 +1,8 @@
 import { BorderWidth } from "../shared/types/borders/border-width";
+import { OpacityOnDisabled } from "../shared/types/effects/opacity";
 import { Gap } from "../shared/types/flex-n-grid/gap";
+import { PointerEvents } from "../shared/types/interactivity/pointer-events";
+import { UserSelect } from "../shared/types/interactivity/user-select";
 import { Overflow } from "../shared/types/layout/overflow";
 import { TextWrap } from "../shared/types/typography/text-wrap";
 import { ElementOptions } from "./shared/element.options"
@@ -12,6 +15,7 @@ export interface BaseButtonOptions extends ElementOptions {
     gap?: Gap,
     textWrap?: TextWrap,
     overflow?: Overflow,
+    userSelect?: UserSelect
 }
 
 export interface ButtonOptions {
@@ -20,7 +24,11 @@ export interface ButtonOptions {
         filled?: FilledButtonOptions,
         outlined?: OutlinedButtonOptions,
     },
-    size?: SizeOptions
+    size?: SizeOptions,
+    disabled?: {
+        opacity?: OpacityOnDisabled,
+        pointerEvents?: PointerEvents,
+    }
 }
 
 export interface FilledButtonOptions {
@@ -41,6 +49,7 @@ export const ButtonOptions: ButtonOptions = {
         textWrap: 'text-nowrap',
         hAlign: 'justify-center',
         vAlign: 'items-center',
+        userSelect: 'select-none',
         fontWeight: 'font-semibold',
         overflow: 'overflow-hidden',
     },
@@ -116,5 +125,9 @@ export const ButtonOptions: ButtonOptions = {
             textSize: 'text-lg',
             rounded: 'rounded-full'
         }
+    },
+    disabled: {
+        opacity: 'opacity-20',
+        pointerEvents: 'pointer-events-none'
     }
 }

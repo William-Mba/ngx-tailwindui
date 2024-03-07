@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ButtonComponent, NgxTailwindUIModule, RippleEffect } from 'ngx-tailwindui';
+import { ButtonComponent, NgxTailwindUIModule } from 'ngx-tailwindui';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 

@@ -1,20 +1,37 @@
-import { Injectable } from "@angular/core";
 import { mergeDeep } from "../shared/helpers/object.helper";
 import { ButtonOptions } from "./button.options";
+import { RippleOptions } from "./ripple.options";
 
-@Injectable({
-    providedIn: 'root'
-})
-export class OptionsManager {
-    private buttonOptions = ButtonOptions;
+export abstract class OptionsManager {
+    private static buttonOptions: ButtonOptions = ButtonOptions;
+    private static rippleOptions: RippleOptions = RippleOptions;
 
-    /**@returns Configured button options */
-    get button() {
+    /**Get button options
+     * @returns Configured options
+     */
+    static get button() {
         return this.buttonOptions
     }
 
-    configure(options: ButtonOptions) {
-        this.buttonOptions = mergeDeep(this.buttonOptions, options)
+    /**Get ripple options
+     * @returns Configured options
+     */
+    static get ripple() {
+        return this.rippleOptions
+    }
+
+    /**Applies configured button options */
+    static setButton(options: ButtonOptions) {
+        const currentOptions = this.buttonOptions;
+        this.buttonOptions = mergeDeep(currentOptions, options)
+
+        return this;
+    }
+
+    /**Applies configured ripple options */
+    static setRipple(options: RippleOptions) {
+        const currentOptions = this.rippleOptions;
+        this.rippleOptions = mergeDeep(currentOptions, options)
 
         return this;
     }

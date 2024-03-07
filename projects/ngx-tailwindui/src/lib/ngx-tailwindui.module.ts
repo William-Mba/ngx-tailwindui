@@ -10,7 +10,6 @@ const elements = [
 ]
 
 @NgModule({
-  declarations: [],
   imports: [
     elements,
     directives

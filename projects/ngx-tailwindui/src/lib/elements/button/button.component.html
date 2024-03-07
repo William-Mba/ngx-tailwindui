@@ -1,3 +1,7 @@
-<button [ngClass]="style" aria-label='Action Button' type="button">
-    <ng-content></ng-content>
+<button [ngClass]="style" [title]="title" [type]="type">
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
 </button>
+
+<ng-template #content>
+    <ng-content></ng-content>
+</ng-template>

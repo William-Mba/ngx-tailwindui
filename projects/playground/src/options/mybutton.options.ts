@@ -1,20 +1,20 @@
 import { ButtonOptions } from "ngx-tailwindui";
 
-export const AppButtonOptions: ButtonOptions = {
+export const MyButtonOptions: ButtonOptions = {
     variant: {
         filled: {
             theme: {
-                bgColor: 'bg-rose-600'
+                bgColor: 'bg-pink-600'
             }
         },
         outlined: {
             border: 'border-4',
             theme: {
                 dark: {
-                    borderColor: 'dark:border-indigo-600'
+                    borderColor: 'dark:border-pink-600'
                 },
                 light: {
-                    borderColor: 'border-indigo-600'
+                    borderColor: 'border-pink-600'
                 }
             }
         }

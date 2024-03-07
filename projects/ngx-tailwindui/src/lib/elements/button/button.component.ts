@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Button } from "./button";
-import { ButtonOptions, ButtonVariant } from "../../options/button.options";
+import { ButtonVariant } from "../../options/button.options";
 import { Size } from "../../options/shared/size.options";
 
 @Component({
@@ -12,10 +12,12 @@ import { Size } from "../../options/shared/size.options";
 })
 export class ButtonComponent extends Button implements OnInit {
 
+  @Input() title: string = '';
+  @Input() type: "submit" | "reset" | "button" = 'button';
   @Input() override size: Size = 'sm';
-  @Input() override className: string = '';
+  @Input() override className!: string;
+  @Input() override disabled!: boolean;
   @Input() override variant: ButtonVariant = "filled";
-  @Input() override options!: ButtonOptions;
 
   ngOnInit(): void {
     this.setup();
