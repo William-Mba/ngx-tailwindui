@@ -1,14 +1,14 @@
 import { Directive, HostListener, Input } from '@angular/core';
 import { concatMap, of, timer } from 'rxjs';
-import { RippleOptions } from '../../options/animations/ripple.options';
-import { ToClassName } from '../../core/helpers/string.helper';
+import { RippleOptions } from '../../options/ripple.options';
+import { ToClassName } from '../../shared/helpers/object.helper';
 
 @Directive({
   selector: '[nxt-ripple]',
   standalone: true
 })
 export class RippleEffect {
-  private options = RippleOptions;
+  private options: RippleOptions = RippleOptions;
   @Input() disabled: boolean = false;
 
   @HostListener('click', ['$event']) onClick(event: PointerEvent) {

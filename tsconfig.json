@@ -17,6 +17,9 @@
       ],
       "@assets/*": [
         "projects/playground/src/assets/*"
+      ],
+      "@options/*": [
+        "projects/playground/src/options/*"
       ]
     },
     "declaration": false,
