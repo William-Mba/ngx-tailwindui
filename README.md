@@ -1,11 +1,13 @@
-# Ngx-Tailwind UI
+<a href="https://github.com/William-Mba/ngx-tailwindui">
+<div align="center">
+    <h1>ngx-tailwindui</h1>
+</div>
+</a>
 
-The open-source components library for Angular, crafted with Tailwind CSS and Material Design.
-
-[Tailwind CSS](https://tailwindcss.com/docs/installation) is a utility-first CSS framework for rapid UI development.
-
-[Material 3](https://m3.material.io/) is the latest version of
-Google's open-source design system.
+<p align="center">
+The best way to quickly integrate <a href="https://tailwindcss.com/docs/installation">Tailwind CSS</a> Components with <a href="https://angular.dev/">Angular</a>
+<br/>
+<br/>
 
 **Resources**
 
