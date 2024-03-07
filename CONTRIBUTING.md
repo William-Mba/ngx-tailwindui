@@ -205,9 +205,9 @@ The `footer` is optional. The [Commit Message Footer](#commit-footer) format des
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
-  │       └─⫸ Commit Scope: animations|common|core|localize|http|
-  │                          elements|forms|migrations|components|
-  │                          upgrade|packaging|changelog|docs-infra|
+  │       └─⫸ Commit Scope: animations|shared|options|elements|
+  │                          migrations|components|upgrade|
+  │                          packaging|changelog|docs|infra|
   │
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
 ```

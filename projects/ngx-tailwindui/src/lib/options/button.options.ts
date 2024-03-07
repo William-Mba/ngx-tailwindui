@@ -3,7 +3,6 @@ import { Gap } from "../shared/types/flex-n-grid/gap";
 import { Overflow } from "../shared/types/layout/overflow";
 import { TextWrap } from "../shared/types/typography/text-wrap";
 import { ElementOptions } from "./shared/element.options"
-import { ShapeOptions } from "./shared/shape.options"
 import { SizeOptions } from "./shared/size.options"
 import { ThemeOptions } from "./shared/theme.options"
 
@@ -16,13 +15,12 @@ export interface BaseButtonOptions extends ElementOptions {
 }
 
 export interface ButtonOptions {
-    base: BaseButtonOptions,
-    variant: {
-        filled: FilledButtonOptions,
-        outlined: OutlinedButtonOptions,
+    base?: BaseButtonOptions,
+    variant?: {
+        filled?: FilledButtonOptions,
+        outlined?: OutlinedButtonOptions,
     },
-    rounded: ShapeOptions,
-    size: SizeOptions
+    size?: SizeOptions
 }
 
 export interface FilledButtonOptions {
@@ -30,13 +28,12 @@ export interface FilledButtonOptions {
 }
 
 export interface OutlinedButtonOptions {
-    border: BorderWidth,
-    theme: {
-        light: ThemeOptions,
-        dark: ThemeOptions,
+    border?: BorderWidth,
+    theme?: {
+        light?: ThemeOptions,
+        dark?: ThemeOptions,
     }
 }
-
 export const ButtonOptions: ButtonOptions = {
     base: {
         gap: 'gap-2',
@@ -94,13 +91,6 @@ export const ButtonOptions: ButtonOptions = {
             }
         }
     },
-    rounded: {
-        sm: 'rounded-sm',
-        md: 'rounded-md',
-        lg: 'rounded-lg',
-        none: 'rounded-none',
-        full: 'rounded-full',
-    },
     size: {
         sm: {
             padding: {
@@ -108,6 +98,7 @@ export const ButtonOptions: ButtonOptions = {
                 y: 'py-1.5'
             },
             textSize: 'text-sm',
+            rounded: 'rounded-full'
         },
         md: {
             padding: {
@@ -115,6 +106,7 @@ export const ButtonOptions: ButtonOptions = {
                 y: 'py-2.5'
             },
             textSize: 'text-base',
+            rounded: 'rounded-full'
         },
         lg: {
             padding: {
@@ -122,6 +114,7 @@ export const ButtonOptions: ButtonOptions = {
                 y: 'py-3'
             },
             textSize: 'text-lg',
+            rounded: 'rounded-full'
         }
     }
 }

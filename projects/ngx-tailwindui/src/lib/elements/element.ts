@@ -1,4 +1,3 @@
-import { Shape } from "../options/shared/shape.options";
 import { Size } from "../options/shared/size.options";
 import { IsAcceptableClass } from "../shared/helpers/type.helper";
 
@@ -11,16 +10,11 @@ export interface IElement {
 export abstract class Element implements IElement {
 
     size!: Size;
-    rounded!: Shape;
     style: string[] = [];
     className: string = '';
 
     protected init() {
-        this.addClass(
-            this.size ? this.size : '',
-            this.rounded ? this.rounded : '',
-            this.className ? this.className : ''
-        )
+        this.addClass(this.className)
     }
 
     hasClass(className: string): boolean {

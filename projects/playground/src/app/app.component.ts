@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { ButtonOptions } from 'ngx-tailwindui';
+import { Component, OnInit } from '@angular/core';
+import { AppButtonOptions } from '@options/app.button.options';
+import { ButtonOptions, OptionsManager } from 'ngx-tailwindui';
 
 @Component({
   selector: 'app-root',
@@ -7,25 +8,9 @@ import { ButtonOptions } from 'ngx-tailwindui';
   styles: []
 })
 export class AppComponent {
+  protected optionsManager = new OptionsManager();
 
-  customOptions: ButtonOptions = {
-    base: ButtonOptions.base,
-    size: ButtonOptions.size,
-    rounded: ButtonOptions.rounded,
-    variant: {
-      filled: {
-        theme: {
-          bgColor: 'bg-yellow-500',
-          modifier: {
-            hover: {
-              bgColor: 'hover:bg-red-600'
-            }
-          }
-        }
-      },
-      outlined: {
-        border: 'border-8', theme: { dark: {}, light: {} }
-      }
-    }
+  constructor() {
+    this.optionsManager.configure(AppButtonOptions);
   }
 }

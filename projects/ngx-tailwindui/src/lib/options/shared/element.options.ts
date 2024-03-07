@@ -5,7 +5,9 @@ import { FontWeight } from "../../shared/types/typography/font-weight";
 
 export interface ElementOptions {
     display?: Display,
+    /**Horizontal alignment */
     hAlign?: JustifyContent,
+    /**Vertical alignment */
     vAlign?: AlignItem,
     fontWeight?: FontWeight,
 }
