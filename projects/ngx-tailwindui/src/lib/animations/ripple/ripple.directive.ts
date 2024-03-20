@@ -1,7 +1,7 @@
 import { Directive, HostListener, Input } from '@angular/core';
 import { concatMap, of, timer } from 'rxjs';
-import { ToClassName } from '../../shared/helpers/object.helper';
-import { OptionsManager } from '../../options/options-manager';
+import { ConfigurationManager } from '../../config/configuation-manager.service';
+import { toClassName } from '../../common/helpers/object.helper';
 
 @Directive({
   selector: '[nxt-ripple]',
@@ -15,7 +15,7 @@ export class RippleEffect {
 
     if (this.disabled) return;
 
-    const options = OptionsManager.ripple;
+    const options = ConfigurationManager.ripple;
 
     const target = event.target as HTMLElement;
 
@@ -32,7 +32,7 @@ export class RippleEffect {
     span.style.top = `${event.pageY - (target.offsetTop + radius)}px`;
     span.style.left = `${event.pageX - (target.offsetLeft + radius)}px`;
 
-    span.className = ToClassName(options.element);
+    span.className = toClassName(options.element);
 
     target.appendChild(span);
 

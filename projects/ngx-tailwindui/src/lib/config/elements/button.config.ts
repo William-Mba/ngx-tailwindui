@@ -1,48 +1,48 @@
-import { BorderWidth } from "../shared/types/borders/border-width";
-import { OpacityOnDisabled } from "../shared/types/effects/opacity";
-import { Gap } from "../shared/types/flex-n-grid/gap";
-import { PointerEvents } from "../shared/types/interactivity/pointer-events";
-import { UserSelect } from "../shared/types/interactivity/user-select";
-import { Overflow } from "../shared/types/layout/overflow";
-import { TextWrap } from "../shared/types/typography/text-wrap";
-import { ElementOptions } from "./shared/element.options"
-import { SizeOptions } from "./shared/size.options"
-import { ThemeOptions } from "./shared/theme.options"
+import { BorderWidth } from "../../common/types/borders/border-width";
+import { OpacityOnDisabled } from "../../common/types/effects/opacity";
+import { Gap } from "../../common/types/flex-n-grid/gap";
+import { PointerEvents } from "../../common/types/interactivity/pointer-events";
+import { UserSelect } from "../../common/types/interactivity/user-select";
+import { Overflow } from "../../common/types/layout/overflow";
+import { ElementConfig } from "../shared/element.config"
+import { SizeConfig } from "../shared/size.config"
+import { ThemeConfig } from "../shared/theme.config"
+import { TextWrap } from "../../common/types/typography/text-wrap";
 
 export type ButtonVariant = 'filled' | 'outlined' | 'text';
 
-export interface BaseButtonOptions extends ElementOptions {
+export interface BaseButtonConfig extends ElementConfig {
     gap?: Gap,
     textWrap?: TextWrap,
     overflow?: Overflow,
     userSelect?: UserSelect
 }
 
-export interface ButtonOptions {
-    base?: BaseButtonOptions,
+export interface ButtonConfig {
+    base?: BaseButtonConfig,
     variant?: {
-        filled?: FilledButtonOptions,
-        outlined?: OutlinedButtonOptions,
+        filled?: FilledButtonConfig,
+        outlined?: OutlinedButtonConfig,
     },
-    size?: SizeOptions,
+    size?: SizeConfig,
     disabled?: {
         opacity?: OpacityOnDisabled,
         pointerEvents?: PointerEvents,
     }
 }
 
-export interface FilledButtonOptions {
-    theme: ThemeOptions,
+export interface FilledButtonConfig {
+    theme: ThemeConfig,
 }
 
-export interface OutlinedButtonOptions {
+export interface OutlinedButtonConfig {
     border?: BorderWidth,
     theme?: {
-        light?: ThemeOptions,
-        dark?: ThemeOptions,
+        light?: ThemeConfig,
+        dark?: ThemeConfig,
     }
 }
-export const ButtonOptions: ButtonOptions = {
+export const ButtonConfig: ButtonConfig = {
     base: {
         gap: 'gap-2',
         display: 'inline-flex',

@@ -1,12 +1,12 @@
-import { Animation } from "../shared/constants/behaviors/animation"
-import { RoundedSize } from "../shared/types/borders/border-radius"
-import { Opacity } from "../shared/types/effects/opacity"
-import { From } from "../shared/types/generics"
-import { Overflow } from "../shared/types/layout/overflow"
-import { Position } from "../shared/types/layout/position"
-import { ThemeOptions } from "./shared/theme.options"
+import { Animation } from "../../common/constants/behaviors/animation"
+import { RoundedSize } from "../../common/types/borders/border-radius"
+import { Opacity } from "../../common/types/effects/opacity"
+import { From } from "../../common/types/generics"
+import { Overflow } from "../../common/types/layout/overflow"
+import { Position } from "../../common/types/layout/position"
+import { ThemeConfig } from "../shared/theme.config"
 
-export interface RippleOptions {
+export interface RippleConfig {
     host: {
         position: Position,
         overflow: Overflow,
@@ -17,15 +17,15 @@ export interface RippleOptions {
         animation: Animation,
         rounded: RoundedSize,
         theme: {
-            light: ThemeOptions,
-            dark: ThemeOptions
+            light: ThemeConfig,
+            dark: ThemeConfig
         }
     }
 }
 
 export type Animation = From<typeof Animation>
 
-export const RippleOptions: RippleOptions = {
+export const RippleConfig: RippleConfig = {
     host: {
         position: 'relative',
         overflow: 'overflow-hidden',

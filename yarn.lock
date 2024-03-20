@@ -5036,10 +5036,10 @@ ng-packagr@^16.2.0:
   optionalDependencies:
     esbuild "^0.19.0"
 
-ngx-tailwindui@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/ngx-tailwindui/-/ngx-tailwindui-0.0.15.tgz#f2e31c4dc0ca7c062cad143fd2886797232acbca"
-  integrity sha512-wGPzYkS0w6ybRjR+grriCPQLrj7OF2rmHY6wyBi+UnJjqZAhiszIWq83a0S6heIMDuViREFAAhyVuO81f+LFiw==
+ngx-tailwindui@^0.0.17:
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/ngx-tailwindui/-/ngx-tailwindui-0.0.17.tgz#8018ce7b23e099bb426aba10a45d750456954268"
+  integrity sha512-N1wxBjQ81t3ehn+A18TVuAKpzeyOv+0XPC3aN6LMkIZUuzDmpcnS/D8G1XNcDj9e8BM+SUhiKcjZ4Bsm9qrqNg==
   dependencies:
     tslib "^2.3.0"
 

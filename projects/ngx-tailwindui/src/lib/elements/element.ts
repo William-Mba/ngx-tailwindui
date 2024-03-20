@@ -1,16 +1,15 @@
-import { OptionsManager } from "../options/options-manager";
-import { Size } from "../options/shared/size.options";
-import { IsAcceptableClass } from "../shared/helpers/type.helper";
+import { IsAcceptableClass } from "../common/helpers/type.helper";
+import { SizeType } from "../config/shared/size.config";
 
+/**ngx-tailwindui elements base class */
 export abstract class Element {
 
-    protected size!: Size;
+    protected size!: SizeType;
+    protected disabled!: boolean;
     protected style: string[] = [];
     protected className: string = '';
 
-    protected init() {
-        this.addClass(this.className)
-    }
+    abstract init(): void;
 
     hasClass(className: string): boolean {
         return (this.className.search(className) === 0);

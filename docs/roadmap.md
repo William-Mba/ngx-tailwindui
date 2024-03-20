@@ -1,12 +1,6 @@
-<!-- catalog-only-start --><!-- ---
-name: Roadmap
-title: Roadmap
-order: 3
------><!-- catalog-only-end -->
-
 # Roadmap
 
-This roadmap describes current, future, and past goals for NgxTailwindUI.
+This roadmap describes current, future, and past goals for ngx-tailwindui.
 
 ## Current
 
@@ -14,14 +8,13 @@ This roadmap describes current, future, and past goals for NgxTailwindUI.
 
 *Planned for 2024*
 
-One of our core goals is to provide TailwindUI components for Angular framework.
+One of our core goals is to provide Tailwind UI components for Angular framework.
 
-These are the components we are currently working on.
+These are the items we are currently working on.
 
-*   Button
-*   FAB
-*   Icon button
-*   Segmented button
+*   Buttons
+*   Button Groups
+*   Ripple effect
 
 ### Expand support for Tailwind CSS classes
 
@@ -43,7 +36,7 @@ We are working on supporting all of the following screen readers:
 *   JAWS
 *   NVDA
 
-### Launch NgxTailwindUI 1.0
+### Release ngx-tailwindui 1.0
 
 *Planned for Q4 2024*
 
@@ -96,4 +89,14 @@ These are features we want to build next.
 
 ## Past
 
-### Cards and more
+### Components and more
+Completed in Q1 2024
+*   Components
+    *   ✅ [Buttons](https://github.com/William-Mba/ngx-tailwindui)
+*   Animations
+    *   ✅ [Ripple effect](https://github.com/William-Mba/ngx-tailwindui)
+
+*   Features
+    *   ✅ Options Manager
+    *   ✅ Default configuration options
+    *   ✅ [Docs and examples](docs/components/)

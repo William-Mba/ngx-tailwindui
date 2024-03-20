@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ButtonComponent, NgxTailwindUIModule } from 'ngx-tailwindui';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 const routes: Routes = []
 @NgModule({
@@ -15,6 +16,7 @@ const routes: Routes = []
     MenuComponent,
     BrowserModule,
     NgxTailwindUIModule,
+    NavigationComponent,
     ButtonComponent,
     RouterModule.forRoot(routes)
   ],

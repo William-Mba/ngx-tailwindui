@@ -12,14 +12,14 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      // "ngx-tailwindui": [
-      //   "projects/ngx-tailwindui/src/public-api.ts"
-      // ],
+      "ngx-tailwindui": [
+        "projects/ngx-tailwindui/src/public-api.ts"
+      ],
       "@assets/*": [
         "projects/playground/src/assets/*"
       ],
       "@options/*": [
-        "projects/playground/src/options/*"
+        "projects/playground/src/configs/*"
       ]
     },
     "declaration": false,

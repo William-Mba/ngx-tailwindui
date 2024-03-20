@@ -1,6 +1,6 @@
-import { PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, PaddingX, PaddingY } from "../../shared/types/spacing/padding";
+import { PaddingLeft, PaddingTop, PaddingRight, PaddingBottom, PaddingX, PaddingY } from "../../common/types/spacing/padding";
 
-export interface PaddingOptions {
+export interface PaddingConfig {
     /**left */
     l?: PaddingLeft,
     /**top */

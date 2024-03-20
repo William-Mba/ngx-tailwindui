@@ -1,36 +1,35 @@
 import { Element } from "../element";
-import { ButtonVariant } from "../../options/button.options";
-import { ToClassName } from "../../shared/helpers/object.helper";
-import { OptionsManager } from "../../options/options-manager";
+import { ConfigurationManager } from "../../config/configuation-manager.service";
+import { ButtonVariant } from "../../config/elements/button.config";
+import { toClassName } from "../../common/helpers/object.helper";
 
 export abstract class Button extends Element {
 
-    disabled!: boolean;
-    variant!: ButtonVariant;
     textContent!: string;
-    options = OptionsManager.button;
-    
-    setup(): void {
-        this.init();
+    variant!: ButtonVariant;
+    config = ConfigurationManager.button;
 
-        // base, also for text variant
+    init(): void {
+
+        // base and text variant
         this.addClass(
-            ToClassName(this.options.base!),
-            ToClassName([this.options.size![this.size]!.rounded]),
-            ToClassName([this.options.size![this.size]!.padding]),
-            ToClassName([this.options.size![this.size]!.textSize])
+            this.className,
+            toClassName(this.config.base!),
+            toClassName([this.config.size![this.size]!.rounded]),
+            toClassName([this.config.size![this.size]!.padding]),
+            toClassName([this.config.size![this.size]!.textSize])
         );
 
         // variants
         if (this.variant === 'filled') {
-            this.addClass(ToClassName(this.options.variant!.filled!));
+            this.addClass(toClassName(this.config.variant!.filled!));
         }
         if (this.variant === 'outlined') {
-            this.addClass(ToClassName(this.options.variant!.outlined!));
+            this.addClass(toClassName(this.config.variant!.outlined!));
         }
 
         if (this.disabled) {
-            this.addClass(ToClassName(this.options.disabled!));
+            this.addClass(toClassName(this.config.disabled!));
         }
     }
 }

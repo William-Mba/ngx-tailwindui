@@ -1,6 +1,21 @@
 {
   "name": "ngx-tailwindui",
-  "version": "0.0.15",
+  "version": "0.0.17",
+  "description": "The best way to quickly integrate Tailwind CSS components with Angular",
+  "keywords": [
+    "tailwindcss",
+    "angular",
+    "web",
+    "developer",
+    "ui",
+    "tailwindui"
+  ],
+  "bugs": {
+    "url": "https://github.com/William-Mba/ngx-tailwindui/issues"
+  },
+  "repository": {
+    "url": "https://github.com/William-Mba/ngx-tailwindui"
+  },
   "author": {
     "email": "wmba@ecologiciel.com",
     "name": "William Mba",

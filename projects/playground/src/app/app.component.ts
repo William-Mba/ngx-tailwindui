@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MyButtonOptions } from '@options/mybutton.options';
-import { OptionsManager } from 'ngx-tailwindui';
+import { MyButtonConfig } from '@options/mybutton.config';
+import { ConfigurationManager } from 'ngx-tailwindui';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ import { OptionsManager } from 'ngx-tailwindui';
 export class AppComponent {
 
   constructor() {
-    OptionsManager.setButton(MyButtonOptions);
+    // set my custom config
+    // ConfigurationManager.setButton(MyButtonConfig);
   }
 }
